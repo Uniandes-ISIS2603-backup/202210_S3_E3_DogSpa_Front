@@ -1,0 +1,18 @@
+<div class = "container-fluid">
+  <div class="row">
+    <h1 style="align-content: center;">Catalogo Productos : </h1>
+    <div class="col mb-2" *ngFor="let producto of productos">
+      <div class="card p-2 style" style="width: 15rem; height: 35rem;">
+        <!--img
+          class="card-img-top"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Cat_on_its_back.jpg/220px-Cat_on_its_back.jpg"
+          alt = "imagen" /-->
+
+          <div class = "card-body">
+            <h5 class="card-title"> {{producto.nombre}}</h5>
+            <p class ="card-text">{{producto.costo}}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

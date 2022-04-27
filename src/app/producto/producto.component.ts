@@ -1,15 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { SelfDecorator } from "@angular/core";
+export class Producto
+{
+  id: number;
+  nombre: string;
+  descripcion: string;
+  costo: number;
+  disponibilidad: number;
+  categoria: string;
 
-@Component({
-  selector: 'app-producto',
-  templateUrl: './producto.component.html',
-  styleUrls: ['./producto.component.css']
-})
-export class ProductoComponent implements OnInit {
 
-  constructor() { }
+  constructor
+  (
+    id: number,
+    nombre: string,
+    descripcion: string,
+    costo: number,
+    disponibilidad: number,
+    categoria: string)
+    {
+      this.id = id;
+      this.nombre= nombre;
+      this.descripcion = descripcion;
+      this.costo = costo;
+      this.disponibilidad = disponibilidad;
+      this.categoria = categoria;
 
-  ngOnInit() {
-  }
+    }
+
+
+
+
 
 }
