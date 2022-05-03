@@ -1,16 +1,29 @@
 <div class = "container-fluid">
   <div class="row">
-    <h1 style="align-content: center;">Catalogo Productos : </h1>
+    <h2 style="align-content: center;">Catalogo Productos :</h2>
+     <div class = "dropdown" >
+       <label>Sede:</label>
+      <select name="sedes" id="sede-select">
+        <option class="op"  value="">--seleccione una opcion--</option>
+
+          <div *ngFor = "let sede of sedes">
+                <option class="op" value={{sede.id}}> {{sede.nombre}} </option>
+
+
+          </div>
+      </select>
+     </div>
+     {{sedes|json}}
     <div class="col mb-2" *ngFor="let producto of productos">
       <div class="card p-2 style" style="width: 15rem; height: 35rem;">
-        <!--img
+        <img
           class="card-img-top"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Cat_on_its_back.jpg/220px-Cat_on_its_back.jpg"
-          alt = "imagen" /-->
+          src="{{producto.imagen}}"
+          alt = "imagen" />
 
           <div class = "card-body">
             <h5 class="card-title"> {{producto.nombre}}</h5>
-            <p class ="card-text">{{producto.costo}}</p>
+            <p class ="card-text">Precio: {{producto.costo}}</p>
           </div>
       </div>
     </div>

@@ -7,12 +7,18 @@ import { Producto } from './producto.component';
   providedIn: 'root'
 })
 export class ProductoService {
-  private apiUrl: string = environment.baseUrl + 'producto';
+  private apiUrl: string = environment.baseUrl;
 
 constructor(private http: HttpClient) { }
 
-getProductos(): Observable<Producto[]>
+getProductosenSede(idSede: number): Observable<Producto[]>
 {
-  return this.http.get<Producto[]> (this.apiUrl);
+  var sede  = idSede.toString();
+  var url = this.apiUrl+'sedes/'+sede+'/productos';
+  console.log(url);
+  return this.http.get<Producto[]> (url);// localhost:8080/api/sedes/idsede/productos
 }
+
+
+
 }
