@@ -6,7 +6,8 @@ import { HallOfFameComponent } from './hall-of-fame/hall-of-fame.component';
 import { ProductoListComponent } from './producto/producto-list/producto-list.component';
 
 const routes: Routes = [
-  { path: 'servicios', component: ServicioListComponent},
+  {
+    path: 'servicios', component: ServicioListComponent},
   { path: 'packDeServicios', component: PackDeServiciosComponent},
   { path: 'hallOfFame', component: HallOfFameComponent},
   { path: 'productos', component: ProductoListComponent}]
