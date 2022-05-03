@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Servicio } from './servicio';
+import { ServicioDetail } from './servicio-detail';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,12 @@ export class ServicioService {
 
   constructor(private http: HttpClient) { }
 
-  getServicios(): Observable<Servicio[]>{
+  getServicios(): Observable<ServicioDetail[]>{
     return this.http.get<Servicio[]>(this.apiUrl);
+  }
+
+  getServicio(id: string): Observable<ServicioDetail>{
+    return this.http.get<ServicioDetail>(this.apiUrl + '/' + id);
   }
 
 }

@@ -1,3 +1,8 @@
+<div *ngIf="selected">
+  <app-servicio-detail [servicioDetail]="selectedService"></app-servicio-detail>
+</div>
+
+
 <div class="container-fluid">
   <div class="row">
     <div class="col mb-2" *ngFor="let servicio of servicios">
@@ -6,6 +11,7 @@
                 class="card-img-top"
                 src="{{ servicio.imagen }}"
                 alt="{{ servicio.nombre }}"
+                (click)="onSelected(servicio)"
               />
               <div class="card-body">
                 <h5 class="card-title">{{ servicio.nombre }}</h5>
