@@ -9,7 +9,7 @@ import { ProductoModule } from './producto/producto.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
