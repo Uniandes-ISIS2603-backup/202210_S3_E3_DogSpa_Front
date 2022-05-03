@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col mb-2" *ngFor="let servicio of servicios">
-          <div class="card p-2" >
-              <img
+      <div class="card p-2" >
+        <img
                 class="card-img-top"
                 src="{{ servicio.imagen }}"
                 alt="{{ servicio.nombre }}"
@@ -11,7 +11,7 @@
                 <h5 class="card-title">{{ servicio.nombre }}</h5>
                   <p class="card-text">{{ servicio.descripcion }}</p>
               </div>
-           </div>
+            </div>
       </div>
-   </div>
+    </div>
 </div>
