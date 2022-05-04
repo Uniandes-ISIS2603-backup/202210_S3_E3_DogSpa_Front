@@ -1,5 +1,3 @@
-import { Component, OnInit } from '@angular/core';
-
 export class Sede
 {
   id: number;
@@ -7,16 +5,14 @@ export class Sede
   nombre: string;
   ciudad :string;
   constructor(
+    id: number,
     direccion: string,
     nombre: string,
-    ciudad :string, id:number )
+    ciudad :string)
   {
     this.id = id;
+    this.direccion=direccion;
     this.nombre= nombre;
     this.ciudad=ciudad;
-    this.direccion=direccion;
   }
 }
-
-
-

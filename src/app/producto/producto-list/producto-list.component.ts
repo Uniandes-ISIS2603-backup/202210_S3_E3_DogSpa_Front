@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../producto.component';
 import { ProductoService } from '../producto.service';
-import { Sede } from 'src/app/sede/sede.component';
 import { SedeService } from 'src/app/sede/sede.service';
+import { Sede } from 'src/app/sede/sede';
 
 @Component({
   selector: 'app-producto-list',
@@ -21,7 +21,6 @@ export class ProductoListComponent implements OnInit {
 
 
   }
-
 
 
 getProductos(categoria: string,idSede:number): void
