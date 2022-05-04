@@ -4,3 +4,55 @@ img {
   max-width: 400px;
 
 }
+
+.container-fluid
+{
+  background-color: rgba(F4, FF, FD);
+  color:#011936;
+}
+.w10 p-3
+{
+  background-color: #f4fffd;
+
+}
+h6
+{
+  font-size: smaller;
+}
+
+.filtroSedes
+{
+  background-color: rgba(46, 53, 62, 0.363);
+  color: #f4fffd;
+}
+.card-title
+{
+  text-shadow: #011936;
+}
+
+
+
+
+label {
+    font-size: 1rem;
+    padding-right: 10px;
+}
+
+select {
+    font-size: .9rem;
+    padding: 2px 5px;
+}
+
+footer {
+    font-size: .8rem;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+
+.op
+{
+  background-color: rgba(46, 53, 62, 0.363);
+}
+
