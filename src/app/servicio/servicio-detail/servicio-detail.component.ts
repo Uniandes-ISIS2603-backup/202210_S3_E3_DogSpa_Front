@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ServicioDetail } from '../servicio-detail';
+import { ServicioService } from '../servicio.service';
 
 @Component({
   selector: 'app-servicio-detail',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicioDetailComponent implements OnInit {
 
-  constructor() { }
+  servicioId!: string;
+  @Input() servicioDetail!: ServicioDetail;
 
-  ngOnInit() {
+  constructor(
+    private route: ActivatedRoute,
+    private servicioService: ServicioService
+  ) { }
+
+  getServicio(){
+    this.servicioService.getServicio(this.servicioId).subscribe(servicio =>{this.servicioDetail = servicio;})
   }
 
+  ngOnInit() {
+    if (this.servicioDetail === undefined){
+      this.servicioId = this.route.snapshot.paramMap.get('id')!
+    }
+    if (this.servicioId){
+      this.getServicio();
+    }
+  }
 }

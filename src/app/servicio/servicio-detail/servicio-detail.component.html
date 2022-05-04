@@ -1,3 +1,24 @@
-<p>
-  servicio-detail works!
-</p>
+<div class="container-lg">
+  <p class="h3 p-3">{{ servicioDetail.nombre }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ servicioDetail.imagen }}"
+          alt="{{ servicioDetail.nombre }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dd>{{ servicioDetail.descripcion }}</dd>
+        <hr />
+        <dt>Costo</dt>
+        <dd>${{ servicioDetail.costo }} COP</dd>
+        <dt>Razas</dt>
+        <dd>{{ servicioDetail.restriccion }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
