@@ -8,17 +8,18 @@
 <div class="container-lg">
   <div class="row">
     <div class="col mb-2" *ngFor="let servicio of servicios">
-      <div class="card p-2" >
-        <img
-                class="card-img-top"
-                src="{{ servicio.imagen }}"
-                alt="{{ servicio.nombre }}"
-                (click)="onSelected(servicio)"
-              />
-              <div class="card-body">
-                <h5 class="card-title">{{ servicio.nombre }}</h5>
-              </div>
+        <div class="card p-2" >
+            <img
+              class="card-img-top"
+              src="{{ servicio.imagen }}"
+              alt="{{ servicio.nombre }}"
+              (click)="onSelected(servicio)"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ servicio.nombre }}</h5>
             </div>
-      </div>
+        </div>
+
     </div>
+  </div>
 </div>

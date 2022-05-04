@@ -14,7 +14,6 @@ export class ServicioListComponent implements OnInit {
   selected: Boolean = false;
   selectedService!: ServicioDetail;
 
-
   constructor(private servicioService: ServicioService) { }
 
   getServicios(): void{
