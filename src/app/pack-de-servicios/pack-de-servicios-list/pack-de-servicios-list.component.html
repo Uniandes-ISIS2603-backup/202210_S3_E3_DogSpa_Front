@@ -1,0 +1,12 @@
+<div class="container-lg">
+  <div class="row">
+    <div class="col mb-2" *ngFor="let each_pack of packs">
+      <div class="card p-2" id="each-card">
+        <!--img class="card-img-top" src="{{each_pack.imagen}}" alt="Card image cap"-->
+        <div class="card-body">
+          <h5 class="card-title">{{each_pack.nombre}}</h5>
+          <p class="card-text">{{each_pack.descripcion}}</p>
+      </div>
+    </div>
+  </div>
+</div>

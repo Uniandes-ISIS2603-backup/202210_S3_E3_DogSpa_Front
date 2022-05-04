@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ServicioModule } from './servicio/servicio.module';
 import { ProductoModule } from './producto/producto.module';
 import { SedeModule } from './sede/sede.module';
+import { PackDeServiciosModule } from './pack-de-servicios/pack-de-servicios.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SedeModule } from './sede/sede.module';
     ServicioModule,
     HttpClientModule,
     ProductoModule,
-    SedeModule
+    SedeModule,
+    PackDeServiciosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
