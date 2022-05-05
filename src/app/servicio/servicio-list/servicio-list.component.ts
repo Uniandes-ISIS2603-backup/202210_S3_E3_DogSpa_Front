@@ -64,8 +64,8 @@ export class ServicioListComponent implements OnInit {
   {
     let value = (<HTMLSelectElement> document.getElementById('sede-select-service')).value;
     this.sede= value;
-    console.log(this.sede) ;
     this.getServicioenSede(value);
+    this.selected = false;
 
 
 

@@ -19,7 +19,6 @@
           formControlName="sedes"
           (change)="setSede()"
         >
-          <option value="1">Seleccione una sede</option>
           <option [value]="a.id" *ngFor="let a of sedes">{{ a.nombre }}</option>
         </select>
       </div>
@@ -54,7 +53,7 @@
     <div class=" row">
 
     <div class="col mb-2" *ngFor="let producto of productos">
-      <div class="card p-2" style="width: 15rem; height: 35rem;">
+      <div class="card p-2" style="width: 25rem; height: 30rem;">
         <img
           class="card-img-top"
           src="{{producto.imagen}}"
@@ -62,7 +61,7 @@
 
           <div class = "card-body">
             <h5 class="card-title"> {{producto.nombre}}</h5>
-            <p class ="card-text">Precio: {{producto.costo}}</p>
+            <p class ="card-text">Precio: {{producto.costo|currency:"COP ":"symbol"}}	</p>
           </div>
       </div>
     </div>
