@@ -1,3 +1,8 @@
+
+
+
+
+
 <div class = "container-fluid">
   <h2 style="align-content: center;">Catalogo Productos :</h2>
 
@@ -14,7 +19,7 @@
           formControlName="sedes"
           (change)="setSede()"
         >
-          <option value="">Seleccione una sede</option>
+          <option value="1">Seleccione una sede</option>
           <option [value]="a.id" *ngFor="let a of sedes">{{ a.nombre }}</option>
         </select>
       </div>
@@ -28,7 +33,7 @@
         formControlName="sedes"
         (change)="setCategoria()"
       >
-        <option value="">Seleccione una sede</option>
+        <option value="1">Seleccione una sede</option>
         <option value="Ropa">Ropa</option>
         <option value="Juguete">Juguete</option>
         <option value="Cuidado">Cuidado</option>
