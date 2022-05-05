@@ -1,21 +1,55 @@
 <div class = "container-fluid">
-  <div class="row">
-    <h2 style="align-content: center;">Catalogo Productos :</h2>
-     <div class = "dropdown" >
-       <label>Sede:</label>
-      <select name="sedes" id="sede-select">
-        <option class="op"  value="">--seleccione una opcion--</option>
+  <h2 style="align-content: center;">Catalogo Productos :</h2>
 
-          <div *ngFor = "let sede of sedes">
-                <option class="op" value={{sede.id}}> {{sede.nombre}} </option>
+  <div class="container-fluid">
+
+    <div class = "row2" >
+
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="sedes"> Sedes: </label>
+        <select
+          class="form-control"
+          id="sede-select-producto"
+          rows="3"
+          formControlName="sedes"
+          (change)="setSede()"
+        >
+          <option value="">Seleccione una sede</option>
+          <option [value]="a.id" *ngFor="let a of sedes">{{ a.nombre }}</option>
+        </select>
+      </div>
+     <br>
+     <div class="form-group mx-sm-3 mb-2">
+      <label for="categoria"> Categorias: </label>
+      <select
+        class="form-control"
+        id="categoria-select-producto"
+        rows="3"
+        formControlName="sedes"
+        (change)="setCategoria()"
+      >
+        <option value="">Seleccione una sede</option>
+        <option value="Ropa">Ropa</option>
+        <option value="Juguete">Juguete</option>
+        <option value="Cuidado">Cuidado</option>
 
 
-          </div>
       </select>
-     </div>
-     {{sedes|json}}
+    </div>
+
+    </div>
+
+
+
+
+
+
+    <br>
+    <div class="container-fluid">
+    <div class=" row">
+
     <div class="col mb-2" *ngFor="let producto of productos">
-      <div class="card p-2 style" style="width: 15rem; height: 35rem;">
+      <div class="card p-2" style="width: 15rem; height: 35rem;">
         <img
           class="card-img-top"
           src="{{producto.imagen}}"
@@ -27,5 +61,8 @@
           </div>
       </div>
     </div>
+
+  </div>
+</div>
   </div>
 </div>

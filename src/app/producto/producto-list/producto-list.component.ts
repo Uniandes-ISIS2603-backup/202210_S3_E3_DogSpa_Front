@@ -12,18 +12,43 @@ import { Sede } from 'src/app/sede/sede';
 export class ProductoListComponent implements OnInit {
   productos: Array<Producto> =[];
   sedes: Array<Sede> =[];
+  categoria: string="";
+  sede: string='1';
 
   constructor(private productoService: ProductoService, private sedeService:SedeService) { }
 
   ngOnInit() {
-    this.getProductos("peluche",2);
+    this.getProductos(this.categoria,this.sede);
     this.getSedes();
 
 
   }
 
+  setCategoria(): void
+  {
+    let value = (<HTMLSelectElement>document.getElementById('categoria-select-producto')).value;
+    this.categoria = value;
+    console.log(this.categoria);
+    this.getProductos(this.categoria,this.sede);
 
-getProductos(categoria: string,idSede:number): void
+
+
+  }
+
+  setSede():void
+  {
+    let value = (<HTMLSelectElement> document.getElementById('sede-select-producto')).value;
+    this.sede= value;
+    console.log(this.sede) ;
+    this.getProductos(this.categoria,this.sede);
+
+
+  }
+
+
+
+
+getProductos(categoria: string,idSede:string): void
   {
     this.productoService.getProductosenSede(idSede).subscribe((productos)=>
     {
