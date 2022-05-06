@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { PackDeServicios } from './packDeServicios';
+import { PackDeServiciosDetail } from './pack-de-servicios-detail';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,12 @@ export class PackDeServiciosService {
 
   constructor(private http: HttpClient) { }
 
-  getPacksDeServicios(): Observable<PackDeServicios[]> {
-    return this.http.get<PackDeServicios[]>(this.apiUrl);
+  getPacksDeServicio(id: string): Observable<PackDeServiciosDetail> {
+    return this.http.get<PackDeServiciosDetail>(this.apiUrl + '/' + id);
+  }
+
+  getPacksDeServicios(): Observable<PackDeServiciosDetail[]> {
+    return this.http.get<PackDeServiciosDetail[]>(this.apiUrl);
   }
 
 }
