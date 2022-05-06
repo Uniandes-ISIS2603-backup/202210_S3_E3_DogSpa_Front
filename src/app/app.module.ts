@@ -8,6 +8,8 @@ import { ServicioModule } from './servicio/servicio.module';
 import { ProductoModule } from './producto/producto.module';
 import { SedeModule } from './sede/sede.module';
 import { PackDeServiciosModule } from './pack-de-servicios/pack-de-servicios.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { PackDeServiciosModule } from './pack-de-servicios/pack-de-servicios.mod
     HttpClientModule,
     ProductoModule,
     SedeModule,
-    PackDeServiciosModule
+    PackDeServiciosModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
