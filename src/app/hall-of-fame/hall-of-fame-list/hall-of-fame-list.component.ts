@@ -21,6 +21,7 @@ export class HallOfFameListComponent implements OnInit {
 
   ngOnInit() {
     this.getHallsOfFame();
+    console.log(this.hallsOfFame);
   }
 
 }
