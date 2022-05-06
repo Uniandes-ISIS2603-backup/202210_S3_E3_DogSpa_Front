@@ -1,5 +1,15 @@
 
 #each-card {
-  width: 15rem;
-  height: 33rem;
+  width: 20rem;
+}
+
+.card {
+  width: auto;
+  margin: auto;
+}
+
+.card-body {
+
+  width: 20rem;
+  height: auto;
 }

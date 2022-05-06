@@ -9,8 +9,8 @@ export class PackDeServiciosDetail extends PackDeServicios {
     sedes: Array<Sede> = [];
     //perros: Array<Perro> = [];
 
-    constructor(nombre: string, costo: number, descuento: number, descripcion: string, servicios: Array<Servicio>, sedes: Array<Sede>) {
-        super(nombre, costo, descuento, descripcion);
+    constructor(id: number, nombre: string, costo: number, descuento: number, descripcion: string, imagen: string, servicios: Array<Servicio>, sedes: Array<Sede>) {
+        super(id, nombre, costo, descuento, descripcion, imagen);
         this.servicios = servicios;
         this.sedes = sedes;
     }
