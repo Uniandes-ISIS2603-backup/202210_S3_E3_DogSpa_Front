@@ -1,7 +1,7 @@
 img {
   height: 350px;
   width: auto;
-  max-width: 400px;
+  max-width: 500px;
 
 }
 
@@ -53,6 +53,20 @@ footer {
 
 .op
 {
-  background-color: rgba(46, 53, 62, 0.363);
+  background-color: #f4fffd;
 }
+
+.row2
+{
+  vertical-align: middle;
+  display: flex;
+}
+.serv
+{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+
 

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Sede } from '../sede';
+import { SedeDetail } from '../sede-detail';
 import { SedeService } from '../sede.service';
+
 
 @Component({
   selector: 'app-sede-list',
@@ -9,7 +11,14 @@ import { SedeService } from '../sede.service';
 })
 export class SedeListComponent implements OnInit {
 
+  selectedSede!: SedeDetail;
+  selected: Boolean = false;
   sedes: Array<Sede> = [];
+
+  onSelected(sede: Sede): void {
+    this.selected = true;
+    this.selectedSede = sede;
+  }
 
   constructor(private sedeService: SedeService) { }
 

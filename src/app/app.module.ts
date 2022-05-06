@@ -8,7 +8,9 @@ import { ServicioModule } from './servicio/servicio.module';
 import { ProductoModule } from './producto/producto.module';
 import { SedeModule } from './sede/sede.module';
 import { HallOfFameModule } from './hall-of-fame/hall-of-fame.module';
+import { PackDeServiciosModule } from './pack-de-servicios/pack-de-servicios.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProductoModule,
     SedeModule,
     HallOfFameModule,
+    PackDeServiciosModule,
     BrowserAnimationsModule
   ],
   providers: [],

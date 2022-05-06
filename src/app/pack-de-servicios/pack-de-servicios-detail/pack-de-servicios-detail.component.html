@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <p class="h2 p-3">{{packDetail.nombre}}</p>
+  <div class="row">
+
+    <div class="col-2">
+      <div class="thumb">
+        <img class="img-fluid" src="{{packDetail.imagen}}" alt="">
+      </div>
+    </div>
+
+    <div class="col">
+      <dl>
+        <dt>Servicios Ofrecidos</dt>
+        <dd class="caption" *ngFor="let each_servicio of packDetail.servicios">{{each_servicio.nombre}}</dd>
+        <dt>Descripción</dt>
+        <dd>{{packDetail.descripcion}}</dd>
+        <dt>Costo</dt>
+        <dd>{{packDetail.costo}}</dd>
+        <dt>Descuento</dt>
+        <dd>{{packDetail.descuento}}</dd>
+      </dl>
+    </div>
+
+  </div>
+</div>

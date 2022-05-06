@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 import { SedeListComponent } from './sede-list/sede-list.component';
+import { SedeDetailComponent } from './sede-detail/sede-detail.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, RouterModule, ReactiveFormsModule
   ],
-  declarations: [SedeListComponent],
+  declarations: [SedeListComponent, SedeDetailComponent],
   exports: [SedeListComponent]
 })
-export class SedeModule { }
+export class SedeModule {}

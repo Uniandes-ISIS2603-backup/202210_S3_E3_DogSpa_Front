@@ -11,10 +11,9 @@ export class ProductoService {
 
 constructor(private http: HttpClient) { }
 
-getProductosenSede(idSede: number): Observable<Producto[]>
+getProductosenSede(idSede: string): Observable<Producto[]>
 {
-  var sede  = idSede.toString();
-  var url = this.apiUrl+'sedes/'+sede+'/productos';
+  var url = this.apiUrl+'sedes/'+idSede+'/productos';
   console.log(url);
   return this.http.get<Producto[]> (url);// localhost:8080/api/sedes/idsede/productos
 }
