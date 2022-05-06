@@ -7,7 +7,9 @@ import { AppComponent } from './app.component';
 import { ServicioModule } from './servicio/servicio.module';
 import { ProductoModule } from './producto/producto.module';
 import { SedeModule } from './sede/sede.module';
+import { PackDeServiciosModule } from './pack-de-servicios/pack-de-servicios.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     ProductoModule,
     SedeModule,
+    PackDeServiciosModule,
     BrowserAnimationsModule
   ],
   providers: [],
