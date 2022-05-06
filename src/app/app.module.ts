@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ServicioModule } from './servicio/servicio.module';
 import { ProductoModule } from './producto/producto.module';
 import { SedeModule } from './sede/sede.module';
+import { HallOfFameModule } from './hall-of-fame/hall-of-fame.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     ProductoModule,
     SedeModule,
+    HallOfFameModule,
     BrowserAnimationsModule
   ],
   providers: [],
