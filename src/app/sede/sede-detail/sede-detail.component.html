@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{ sedeDetail.nombre }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ sedeDetail.imagen }}"
+          alt="{{ sedeDetail.nombre }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Ciudad</dt>
+        <dd>{{ sedeDetail.ciudad }}</dd>
+        <hr />
+        <dt>Dirección</dt>
+        <dd>{{ sedeDetail.direccion}}</dd>
+        <hr />
+      </dl>
+    </div>
+  </div>
+</div>
