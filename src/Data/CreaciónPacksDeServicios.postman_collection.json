@@ -1,0 +1,555 @@
+{
+	"info": {
+		"_postman_id": "f45f0919-7d68-41fd-9dc9-69a2f43e8208",
+		"name": "CreaciónPacksDeServicios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear Servicio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_s1\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Peluqueria\",\r\n    \"descripcion\":\"Tu perro va a quedar lind@.\",\r\n    \"costo\":25000,\r\n    \"restriccion\":\"Pelo Blanco\",\r\n    \"disponibilidad\":true,\r\n    \"imagen\":\"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/servicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicio 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_s2\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Manicura\",\r\n    \"descripcion\":\"Tu perro va a quedar lind@.\",\r\n    \"costo\":30000,\r\n    \"restriccion\":\"Mas de 2 años\",\r\n    \"disponibilidad\":true,\r\n    \"imagen\":\"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/servicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicio 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_s3\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Comida\",\r\n    \"descripcion\":\"Rica comida.\",\r\n    \"costo\":15000,\r\n    \"restriccion\":\"No hay restriccion\",\r\n    \"disponibilidad\":true,\r\n    \"imagen\":\"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/servicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicio 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_s4\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Ropa\",\r\n    \"descripcion\":\"Perro Pintoso\",\r\n    \"costo\":15000,\r\n    \"restriccion\":\"No hay restriccion\",\r\n    \"disponibilidad\":false,\r\n    \"imagen\":\"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/servicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicio 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_s5\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Masaje\",\r\n    \"descripcion\":\"Perro Tranquilo\",\r\n    \"costo\":15000,\r\n    \"restriccion\":\"No hay restriccion\",\r\n    \"disponibilidad\":false,\r\n    \"imagen\":\"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/servicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicio 6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_s6\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Ropa 2\",\r\n    \"descripcion\":\"Linda ropa\",\r\n    \"costo\":15000,\r\n    \"restriccion\":\"No hay restriccion\",\r\n    \"disponibilidad\":false,\r\n    \"imagen\":\"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/servicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Pack De Servicios",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_pk\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Descuento Veraniego\",\r\n    \"costo\":50000,\r\n    \"descuento\":0.5,\r\n    \"descripcion\":\"Perfecto para el sol.\",\r\n    \"imagen\": \"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\",\r\n    \"servicios\":[{ \"id\": {{new_id_s1}} }, { \"id\": {{new_id_s2}} }, { \"id\": {{new_id_s3}} }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/packdeservicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"packdeservicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Pack De Servicios 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_pk2\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"¡Invierano! ¡Ven a jugar!\",\r\n    \"costo\":25000,\r\n    \"descuento\":0.75,\r\n    \"descripcion\":\"Perfecto para el sol de diciembre.\",\r\n    \"imagen\": \"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\",\r\n    \"servicios\":[{ \"id\": {{new_id_s1}} }, { \"id\": {{new_id_s2}} }, { \"id\": {{new_id_s3}} }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/packdeservicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"packdeservicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Pack De Servicios 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_pk3\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Frío Invernal\",\r\n    \"costo\":70000,\r\n    \"descuento\":0.2,\r\n    \"descripcion\":\"¡No sientas frío jaja!\",\r\n    \"imagen\": \"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\",\r\n    \"servicios\":[{ \"id\": {{new_id_s1}} }, { \"id\": {{new_id_s2}} }, { \"id\": {{new_id_s3}} }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/packdeservicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"packdeservicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Pack De Servicios 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_pk4\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"¡Los Oscar son esta noche!\",\r\n    \"costo\":50000,\r\n    \"descuento\":0.5,\r\n    \"descripcion\":\"Bien arreglado.\",\r\n    \"imagen\": \"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\",\r\n    \"servicios\":[{ \"id\": {{new_id_s1}} }, { \"id\": {{new_id_s2}} }, { \"id\": {{new_id_s3}} }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/packdeservicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"packdeservicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Pack De Servicios 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_pk5\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Día de la Madre\",\r\n    \"costo\":50000,\r\n    \"descuento\":0.5,\r\n    \"descripcion\":\"El perfecto regalo.\",\r\n    \"imagen\": \"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\",\r\n    \"servicios\":[{ \"id\": {{new_id_s1}} }, { \"id\": {{new_id_s2}} }, { \"id\": {{new_id_s3}} }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/packdeservicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"packdeservicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Pack De Servicios 6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_pk6\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Uñas\",\r\n    \"costo\":50000,\r\n    \"descuento\":0.5,\r\n    \"descripcion\":\"Uñas literalmente.\",\r\n    \"imagen\": \"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\",\r\n    \"servicios\":[{ \"id\": {{new_id_s1}} }, { \"id\": {{new_id_s2}} }, { \"id\": {{new_id_s3}} }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/packdeservicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"packdeservicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Pack De Servicios 7",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_pk7\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"¡Nueva ropa!\",\r\n    \"costo\":50000,\r\n    \"descuento\":0.5,\r\n    \"descripcion\":\"¡Qué pintas!\",\r\n    \"imagen\": \"https://themonopolitan.com/assets/img/post/monopolitan/Pooch_pack_01.jpg?ezimgfmt=ng:webp/ngcb80\",\r\n    \"servicios\":[{ \"id\": {{new_id_s1}} }, { \"id\": {{new_id_s2}} }, { \"id\": {{new_id_s3}} }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/packdeservicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"packdeservicios"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
