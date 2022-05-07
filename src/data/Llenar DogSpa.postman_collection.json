@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "9674f5c3-c879-432f-a4f0-ad95c2e1ff00",
-		"name": "Productos: Creacion de productos",
+		"_postman_id": "1342ea7e-58a6-45a6-aabf-face2d85003c",
+		"name": "Llenar DogSpa",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -32,7 +32,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n        \"direccion\": \"calle 23 #98 //\",\n        \"nombre\": \"DogSpa: Santa Barbara\",\n        \"ciudad\": \"Bogota\"\n    }"
+					"raw": "    {\n        \"direccion\": \"calle 23 #98 //\",\n        \"nombre\": \"DogSpa: Santa Barbara\",\n        \"ciudad\": \"Bogota\",\n        \"imagen\": \"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/3f/94/4f/vista-de-uma-das-muitas.jpg?w=1200&h=-1&s=1\"\n    }"
 				},
 				"url": {
 					"raw": "http://{{ip}}:{{puerto}}/api/sede",
@@ -77,7 +77,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n        \"direccion\": \"calle 180 #98 //\",\n        \"nombre\": \"DogSpa: Santa fe\",\n        \"ciudad\": \"Bogota\"\n    }"
+					"raw": "    {\n        \"direccion\": \"calle 180 #98 //\",\n        \"nombre\": \"DogSpa: Santa fe\",\n        \"ciudad\": \"Bogota\",\n        \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/f/f1/Santafe_Mall_in_north_Bogota.jpg\"\n    }"
 				},
 				"url": {
 					"raw": "http://{{ip}}:{{puerto}}/api/sede",
@@ -122,7 +122,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n        \"direccion\": \"calle 85 #933 //\",\n        \"nombre\": \"DogSpa: Unicentro\",\n        \"ciudad\": \"Bogota\"\n    }"
+					"raw": "    {\n        \"direccion\": \"calle 85 #933 //\",\n        \"nombre\": \"DogSpa: Unicentro\",\n        \"ciudad\": \"Bogota\",\n        \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/9/9e/Bogotá_Unicentro.JPG\"\n    }"
 				},
 				"url": {
 					"raw": "http://{{ip}}:{{puerto}}/api/sede",
@@ -299,7 +299,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"categoria\": \"Juguete\",\r\n    \"costo\": 35000,\r\n    \"descripcion\": \"¡Llénelo de golosinas saludables! Dientes limpios y encías saludables, flota, fabricado con goma natural que es seguro para tu perro. \",\r\n    \"disponibilidad\": 10,\r\n    \"nombre\": \"ZeeDog Super Pear Pera - Verde\",\r\n    \"imagen\":\"https://laikapp.s3.amazonaws.com/images_products/1_4327_SUPER_PEAR_474X454.jpg\"\r\n}"
+					"raw": "{\r\n    \"categoria\": \"Juguete\",\r\n    \"costo\": 35000,\r\n    \"descripcion\": \"¡Llénelo de golosinas saludables! Dientes limpios y encías saludables, flota, fabricado con goma natural que es seguro para tu perro. Limpia los dientes.\",\r\n    \"disponibilidad\": 10,\r\n    \"nombre\": \"ZeeDog Super Pear Pera - Verde\",\r\n    \"imagen\":\"https://laikapp.s3.amazonaws.com/images_products/1_4327_SUPER_PEAR_474X454.jpg\"\r\n}"
 				},
 				"url": {
 					"raw": "http://{{ip}}:{{puerto}}/api/producto",
@@ -1193,6 +1193,600 @@
 					]
 				},
 				"description": "**Release: Paso-5**\r\n\r\nAsocia un libro a un autor en la aplicación. \r\n\r\nSe envía el Id del autor y el del libro a asociar en la URL de la petición.\r\n\r\n**Código http esperado: 200**"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_s1\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Hand Stripping\",\r\n    \"descripcion\":\"Técnicas de peluquería especiales para ciertas razas.\",\r\n    \"costo\":30000,\r\n    \"restriccion\":\"Schnauzer, Cocker Spaniel, Irish Wolf Hound, Wire Fox Terrier, Wire-haired Pointer, Wire-haired Dachshund,Border Terrier\",\r\n    \"disponibilidad\":true,\r\n    \"imagen\": \"https://inspiredfur.com/wp-content/uploads/2021/11/hand-stripping-wire-type-scaled-e1637534223199.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/servicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicio 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_s2\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Peluquería\",\r\n    \"descripcion\":\"Tu perro va a quedar lind@.\",\r\n    \"costo\":25000,\r\n    \"restriccion\":\"Todas\",\r\n    \"disponibilidad\":true,\r\n    \"imagen\": \"https://media.istockphoto.com/photos/female-groomer-haircut-pomeranian-dog-on-the-table-of-outdoor-process-picture-id1184851389?k=20&m=1184851389&s=612x612&w=0&h=N6z9UmMo-JvAi7Q9BT9cBdffY_3dhFhwTgl63w2xvso=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/servicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicio 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_s3\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Keratina Canina\",\r\n    \"descripcion\":\"Que el pelo de tu perro quede suave y liso.\",\r\n    \"costo\":1000000,\r\n    \"restriccion\":\"De pelo liso.\",\r\n    \"disponibilidad\":true,\r\n    \"imagen\": \"https://www.akc.org/wp-content/uploads/2018/05/samoyed-mother-dog-with-puppy-outdoors-500x486.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/servicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicio 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_s4\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Spa\",\r\n    \"descripcion\":\"Relaja a tu mascota\",\r\n    \"costo\":100000,\r\n    \"restriccion\":\"Pequeñas (Ver criterios de tamaños de razas)\",\r\n    \"disponibilidad\":true,\r\n    \"imagen\": \"https://media.istockphoto.com/photos/spitz-having-rest-at-spa-with-cucumbers-on-eyes-picture-id1199449447?k=20&m=1199449447&s=612x612&w=0&h=SEUZFhaeqc9C8pjxUOK4-_XolY-HIrPQw-3PSnHSm-8=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/servicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicio 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_s5\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Masaje\",\r\n    \"descripcion\":\"Tu perro va a quedar tranquilo\",\r\n    \"costo\":15000,\r\n    \"restriccion\":\"No hay restriccion\",\r\n    \"disponibilidad\":true,\r\n    \"imagen\":\"https://cdn.shopify.com/s/files/1/0086/6320/3921/files/shutterstock_1141813637_1.jpg?v=1576077369\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/servicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Servicio 6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_s6\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Corte de uñas\",\r\n    \"descripcion\":\"Tu perrito te lo va a agradecer\",\r\n    \"costo\":15000,\r\n    \"restriccion\":\"Para todas las razas\",\r\n    \"disponibilidad\":true,\r\n    \"imagen\":\"https://www.petbarn.com.au/petspot/app/uploads/2020/01/shutterstock_1063973729.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/servicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Pack De Servicios",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_pk\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Todo para su pelo\",\r\n    \"costo\":50000,\r\n    \"descuento\":50,\r\n    \"descripcion\":\"Si tu mascota necesita un arreglo inmediato de pelo.\",\r\n    \"imagen\": \"http://mascotafiel.com/wp-content/uploads/2017/01/hacer-peluquer%C3%ADa-canina-en-casa-8_opt.jpg\",\r\n    \"servicios\":[{ \"id\": {{new_id_s1}} }, { \"id\": {{new_id_s2}} }, { \"id\": {{new_id_s3}} }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/packdeservicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"packdeservicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Pack De Servicios 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_pk2\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Spa completo\",\r\n    \"costo\":25000,\r\n    \"descuento\":75,\r\n    \"descripcion\":\"Perfecto para que tu mascota quede como nueva.\",\r\n    \"imagen\": \"https://i.pinimg.com/550x/18/3b/42/183b42a109ddeafd41f008f840fddbcf.jpg\",\r\n    \"servicios\":[{ \"id\": {{new_id_s4}} }, { \"id\": {{new_id_s5}} }, { \"id\": {{new_id_s6}} }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/packdeservicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"packdeservicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Hall",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"hallid_1\",data.id);\r",
+							"tests[\"No genera error en el Post\"] = responseCode.code === 201;\r",
+							"console.log(data.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"prestador\": \"Suba\",\r\n        \"servicio\" : \"Peluquería\",\r\n        \"imagen\": \"https://cff2.earth.com/uploads/2019/02/26123103/Dogs-tend-to-adopt-the-same-personality-traits-as-their-owners-960x640.jpg\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/hallOfFame",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"hallOfFame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Hall 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"hallid_2\",data.id);\r",
+							"tests[\"No genera error en el Post\"] = responseCode.code === 201;\r",
+							"console.log(data.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"prestador\": \"Usaquén\",\r\n        \"servicio\" : \"Limpieza nasal\",\r\n        \"imagen\": \"https://www.petmd.com/sites/default/files/styles/article_image/public/going-for-a-walk-picture-id917875026.jpg?itok=egUc9l-k\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/hallOfFame",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"hallOfFame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Hall 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"hallid_3\",data.id);\r",
+							"tests[\"No genera error en el Post\"] = responseCode.code === 201;\r",
+							"console.log(data.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"prestador\": \"Santa Fé\",\r\n        \"servicio\" : \"Uñas\",\r\n        \"imagen\": \"https://www.akc.org/wp-content/uploads/2015/06/Young-girl-meeting-a-young-Siberian-Husky-puppy.20190813162754417.jpg\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/hallOfFame",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"hallOfFame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Hall 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"hallid_4\",data.id);\r",
+							"tests[\"No genera error en el Post\"] = responseCode.code === 201;\r",
+							"console.log(data.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"prestador\": \"Santa Fé\",\r\n        \"servicio\" : \"Masaje\",\r\n        \"imagen\": \"https://www.akc.org/wp-content/uploads/2019/10/Nova-Scotia-Duck-Tolling-Retriever-puppy-laying-down-indoors.20190813030428209.jpg\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/hallOfFame",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"hallOfFame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Hall 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"hallid_5\",data.id);\r",
+							"tests[\"No genera error en el Post\"] = responseCode.code === 201;\r",
+							"console.log(data.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"prestador\": \"Chía\",\r\n        \"servicio\" : \"Baño burbujeante\",\r\n        \"imagen\": \"https://www.akc.org/wp-content/uploads/2016/02/Boston-Terrier-getting-a-bath-in-a-tub-outdoors.jpeg\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/hallOfFame",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"hallOfFame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Hall 6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"hallid_6\",data.id);\r",
+							"tests[\"No genera error en el Post\"] = responseCode.code === 201;\r",
+							"console.log(data.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"prestador\": \"Teusaquillo\",\r\n        \"servicio\" : \"Guardería\",\r\n        \"imagen\": \"https://www.akc.org/wp-content/uploads/2019/05/English-Setter-waiting-in-a-kennel-in-the-back-of-a-hatchback-car.20190812032408929.jpg\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/hallOfFame",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"hallOfFame"
+					]
+				}
 			},
 			"response": []
 		}
