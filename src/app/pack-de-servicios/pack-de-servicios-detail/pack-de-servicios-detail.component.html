@@ -13,13 +13,10 @@
         <dt>Servicios Ofrecidos</dt>
         <dd class="caption" *ngFor="let each_servicio of packDetail.servicios">{{each_servicio.nombre}}</dd>
         <dt>Descripción</dt>
-        <dd>{{packDetail.descripcion}}</dd>
+        <dd>{{packDetail.descripcion}} <br> Con un descuento del {{packDetail.descuento}} %.</dd>
         <dt>Costo</dt>
         <dd>{{packDetail.costo}}</dd>
-        <dt>Descuento</dt>
-        <dd>{{packDetail.descuento}}</dd>
       </dl>
     </div>
-
   </div>
 </div>

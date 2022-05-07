@@ -10,7 +10,7 @@ import { PackDeServiciosDetail } from './pack-de-servicios-detail';
 })
 export class PackDeServiciosService {
 
-  private apiUrl: string = environment.baseUrl + '/packdeservicios';
+  private apiUrl: string = environment.baseUrl + 'packdeservicios';
 
   constructor(private http: HttpClient) { }
 

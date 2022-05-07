@@ -19,6 +19,7 @@ export class PackDeServiciosListComponent implements OnInit {
 
   getPacksDeServicios() {
     this.packServicios.getPacksDeServicios().subscribe({next: packs => this.packs = packs, error: e => console.error(e)});
+    console.log(this.packs);
   }
 
   onSelected(pack: PackDeServiciosDetail) {

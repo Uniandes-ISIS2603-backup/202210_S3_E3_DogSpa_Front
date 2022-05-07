@@ -1,28 +1,28 @@
-/* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+// /* tslint:disable:no-unused-variable */
+// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+// import { By } from '@angular/platform-browser';
+// import { DebugElement } from '@angular/core';
 
-import { PackDeServiciosListComponent } from './pack-de-servicios-list.component';
+// import { PackDeServiciosListComponent } from './pack-de-servicios-list.component';
 
-describe('PackDeServiciosListComponent', () => {
-  let component: PackDeServiciosListComponent;
-  let fixture: ComponentFixture<PackDeServiciosListComponent>;
+// describe('PackDeServiciosListComponent', () => {
+//   let component: PackDeServiciosListComponent;
+//   let fixture: ComponentFixture<PackDeServiciosListComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PackDeServiciosListComponent ]
-    })
-    .compileComponents();
-  }));
+//   beforeEach(async(() => {
+//     TestBed.configureTestingModule({
+//       declarations: [ PackDeServiciosListComponent ]
+//     })
+//     .compileComponents();
+//   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PackDeServiciosListComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//   beforeEach(() => {
+//     fixture = TestBed.createComponent(PackDeServiciosListComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

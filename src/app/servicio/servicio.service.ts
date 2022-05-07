@@ -23,11 +23,11 @@ export class ServicioService {
   }
 
   getServicioenSede(idSede: string): Observable<Servicio[]>
-{
+  {
   var url = environment.baseUrl+'sedes/'+idSede+'/servicios';
   console.log(url);
   return this.http.get<Servicio[]> (url);// localhost:8080/api/sedes/idsede/productos
-}
+  }
 
 
 }

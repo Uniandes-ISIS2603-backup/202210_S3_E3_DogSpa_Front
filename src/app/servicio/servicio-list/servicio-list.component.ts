@@ -32,31 +32,27 @@ export class ServicioListComponent implements OnInit {
   }
 
   getSedes():void
-
   {
     this.sedeService.getSedes().subscribe((sedes)=>
     {
       this.sedes =sedes;
-
-
     });
-
   }
 
 
   getServicioenSede(idSede:string): void
-{
+  {
   this.servicioService.getServicioenSede(idSede).subscribe((servicios)=>
   {
     this.servicios = servicios;
   });
-}
+  }
 
 
   ngOnInit() {
-    //this.getServicios();
-    this.getSedes();
-    this.getServicioenSede(this.sede);
+    this.getServicios();
+    //this.getSedes();
+    //this.getServicioenSede(this.sede);
 
   }
 
@@ -66,8 +62,5 @@ export class ServicioListComponent implements OnInit {
     this.sede= value;
     this.getServicioenSede(value);
     this.selected = false;
-
-
-
   }
 }
