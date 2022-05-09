@@ -1,4 +1,4 @@
-<div class="form-group mx-sm-3 mb-2">
+<!-- <div class="form-group mx-sm-3 mb-2">
   <label for="sedes2"> Sedes: </label>
   <select
     id="sede-select-service"
@@ -9,23 +9,23 @@
     <option [value]="a.id" *ngFor="let a of sedes">{{ a.nombre }}</option>
   </select>
 </div>
-<br>
+<br> -->
 
 
 <div *ngIf="selected">
   <app-servicio-detail [servicioDetail]="selectedService"></app-servicio-detail>
 </div>
 
-
 <div class="container-lg">
   <div class="row">
-    <div class="col mb-2" *ngFor="let servicio of servicios">
-        <div class="card p-2" style ="width: 20rem;">
+    <div class="col col-mb-2 col-sm-3" *ngFor="let servicio of servicios">
+        <div class="card p-2" style ="height: 25rem; width: 20rem;">
             <img
               class="card-img-top"
               src="{{ servicio.imagen }}"
               alt="{{ servicio.nombre }}"
               (click)="onSelected(servicio)"
+              width="300" height="200"
             />
             <div class="card-body">
               <h5 class="card-title">{{ servicio.nombre }}</h5>

@@ -1,11 +1,24 @@
+<div *ngIf="selected">
+<app-sede-detail [sedeDetail]="selectedSede"></app-sede-detail>
+</div>
+
+
 <div class="container-lg">
   <div class="row">
     <div class="col mb-2" *ngFor="let sede of sedes">
           <div class="card p-2" style ="width: 20rem;">
-              <div class="card-body">
+            <img
+              class="card-img-top"
+              src="{{ sede.imagen }}"
+              alt="{{ sede.nombre }}"
+              (click)="onSelected(sede)"
+            />
+
+            <div class="card-body">
                 <h5 class="card-title">Sede {{sede.nombre}}</h5>
+
               </div>
-           </div>
+            </div>
       </div>
-   </div>
+    </div>
 </div>

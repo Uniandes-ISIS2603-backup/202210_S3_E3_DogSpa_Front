@@ -1,0 +1,18 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col-mb-2 col-sm-3" *ngFor="let hallOfFame of hallsOfFame">
+          <div class="card p-2">
+              <img
+                class="card-img-top"
+                src="{{ hallOfFame.imagen }}"
+                alt="{{ hallOfFame.servicio }}"
+              />
+              <div class="card-body">
+                <h5 class="card-title">{{ hallOfFame.prestador }}</h5>
+                  <p class="card-text">{{ hallOfFame.servicio }}</p>
+              </div>
+           </div>
+      </div>
+   </div>
+</div>
