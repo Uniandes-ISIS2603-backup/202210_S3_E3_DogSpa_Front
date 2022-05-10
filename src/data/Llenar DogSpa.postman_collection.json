@@ -1533,6 +1533,48 @@
 			"response": []
 		},
 		{
+			"name": "Crear Pack De Servicios 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"postman.setGlobalVariable(\"new_id_pk2\", data.id);\r",
+							"tests[\"no genera error en el Post\"] = responseCode.code === 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Perro consentido\",\r\n    \"costo\":25000,\r\n    \"descuento\":75,\r\n    \"descripcion\":\"Perfecto para que tu mascota quede como nueva.\",\r\n    \"imagen\": \"https://grisipetcare.com.mx/wp-content/uploads/2020/02/perro-consentido-ingredientes.jpg\",\r\n    \"servicios\":[{ \"id\": {{new_id_s1}} }, { \"id\": {{new_id_s3}} }, { \"id\": {{new_id_s6}} }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip}}:{{puerto}}/api/packdeservicios",
+					"protocol": "http",
+					"host": [
+						"{{ip}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"api",
+						"packdeservicios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Crear Hall",
 			"event": [
 				{
