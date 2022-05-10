@@ -1,5 +1,12 @@
 <testExecutions version="1">
+  <file path="src/app/producto/producto-list/producto-list.component.spec.ts">
+    <testCase name="ProductoListComponent should have an img element " duration="109"/>
+    <testCase name="ProductoListComponent should create" duration="25"/>
+  </file>
+  <file path="src/app/producto/producto.service.spec.ts">
+    <testCase name="Service: Producto should ..." duration="5"/>
+  </file>
   <file path="src/app/servicio/servicio-list/servicio-list.component.spec.ts">
-    <testCase name="ServicioListComponent should create" duration="35"/>
+    <testCase name="ServicioListComponent should create" duration="18"/>
   </file>
 </testExecutions>
