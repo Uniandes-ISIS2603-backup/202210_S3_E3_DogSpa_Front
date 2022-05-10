@@ -6,17 +6,6 @@ import { faker } from '@faker-js/faker';
 
 import { ProductoListComponent } from './producto-list.component';
 
-
-
-describe('ProductoListComponent', () => {
-  let component: ProductoListComponent;
-  let fixture: ComponentFixture<ProductoListComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ProductoListComponent ]
-
-
 import { HttpClientModule } from '@angular/common/http';
 
  import { Producto } from '../producto';
@@ -27,7 +16,7 @@ describe('ProductoListComponent', () => {
   let debug:DebugElement;
 
   beforeEach(async(() => {
-     TestBed.configureTestingModule({
+    TestBed.configureTestingModule({
       imports:[HttpClientModule],
       declarations: [ ProductoListComponent ],
       providers: [ProductoService]
@@ -38,8 +27,6 @@ describe('ProductoListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ProductoListComponent);
     component = fixture.componentInstance;
-
-    
     component.productos =
     [
       new Producto
@@ -65,5 +52,8 @@ describe('ProductoListComponent', () => {
   it('should have an img element ', () => {
    expect(debug.query(By.css('img')).attributes['alt']).toEqual(
      component.productos[0].nombre);});
+
+
+
 
 });

@@ -34,7 +34,7 @@ describe('PackDeServiciosDetailComponent', () => {
       faker.datatype.number(),
       faker.datatype.string(),
       faker.datatype.boolean(),
-      faker.datatype.string(),
+      faker.image.imageUrl()
     );
 
     let servicio2 = new Servicio(
@@ -44,7 +44,7 @@ describe('PackDeServiciosDetailComponent', () => {
       faker.datatype.number(),
       faker.datatype.string(),
       faker.datatype.boolean(),
-      faker.datatype.string(),
+      faker.image.imageUrl()
     );
 
     let servicio3 = new Servicio(
@@ -54,7 +54,7 @@ describe('PackDeServiciosDetailComponent', () => {
       faker.datatype.number(),
       faker.lorem.sentence(),
       faker.datatype.boolean(),
-      faker.datatype.string(),
+      faker.image.imageUrl(),
     );
 
     component.packDetail = new PackDeServiciosDetail(
@@ -63,7 +63,7 @@ describe('PackDeServiciosDetailComponent', () => {
       faker.datatype.number(),
       faker.datatype.number(),
       faker.lorem.sentence(),
-      faker.datatype.string(),
+      faker.image.imageUrl(),
       [servicio1, servicio2, servicio3],
       [],
     );

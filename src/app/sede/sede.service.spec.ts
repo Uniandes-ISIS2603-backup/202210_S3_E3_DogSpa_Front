@@ -1,16 +1,18 @@
-// /* tslint:disable:no-unused-variable */
+/* tslint:disable:no-unused-variable */
 
-// import { TestBed, async, inject } from '@angular/core/testing';
-// import { SedeService } from './sede.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TestBed, async, inject } from '@angular/core/testing';
+import { SedeService } from './sede.service';
 
-// describe('Service: Sede', () => {
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       providers: [SedeService]
-//     });
-//   });
+describe('Service: Sede', () => {
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [SedeService],
+      imports:[HttpClientTestingModule]
+    });
+  });
 
-//   it('should ...', inject([SedeService], (service: SedeService) => {
-//     expect(service).toBeTruthy();
-//   }));
-// });
+  it('should ...', inject([SedeService], (service: SedeService) => {
+    expect(service).toBeTruthy();
+  }));
+});

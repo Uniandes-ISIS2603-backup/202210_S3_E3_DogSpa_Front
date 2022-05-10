@@ -6,6 +6,8 @@ import { faker } from '@faker-js/faker';
 
 import { SedeListComponent } from './sede-list.component';
 import { Sede } from '../sede';
+import { HttpClientModule } from '@angular/common/http';
+import { SedeService } from '../sede.service';
 
 describe('SedeListComponent', () => {
   let component: SedeListComponent;
@@ -14,7 +16,9 @@ describe('SedeListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SedeListComponent ]
+      imports:[HttpClientModule],
+      declarations: [ SedeListComponent ],
+      providers: [SedeService]
     })
     .compileComponents();
   }));
@@ -28,8 +32,8 @@ describe('SedeListComponent', () => {
         faker.datatype.number(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
-        faker.lorem.sentence()
-
+        faker.lorem.sentence(),
+        faker.image.imageUrl()
       ),
     ];
 
