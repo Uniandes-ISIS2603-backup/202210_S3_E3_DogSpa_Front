@@ -1,8 +1,6 @@
 
 
 
-
-
 <div class = "container-fluid">
   <h2 style="align-content: center;">Catalogo Productos :</h2>
 
@@ -39,8 +37,12 @@
       </select>
     </div>
 
-    </div>
+    <div *ngIf="selected">
+      <app-producto-detail [productoDetails]="selectProducto"></app-producto-detail>
+</div>
 
+
+    </div>
 
 
 
@@ -55,7 +57,8 @@
         <img
           class="card-img-top"
           src="{{producto.imagen}}"
-          alt = "{{producto.nombre}}" />
+          alt = "{{producto.nombre}}" (mouseover)="onSelectedDet(producto)"
+          />
 
           <div class = "card-body">
             <h5 class="card-title"> {{producto.nombre}}</h5>

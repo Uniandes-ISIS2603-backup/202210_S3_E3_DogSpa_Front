@@ -1,0 +1,15 @@
+.container-fluid_Detail
+{
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+box-shadow: 10px;
+}
+
+
+.fluid_Detail{
+
+
+  position: absolute;
+  z-index: 10;
+}

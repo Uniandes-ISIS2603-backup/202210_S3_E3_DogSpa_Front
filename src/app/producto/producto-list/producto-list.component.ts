@@ -9,11 +9,15 @@ import { Sede } from 'src/app/sede/sede';
   templateUrl: './producto-list.component.html',
   styleUrls: ['./producto-list.component.css']
 })
+
+
 export class ProductoListComponent implements OnInit {
   productos: Array<Producto> =[];
   sedes: Array<Sede> =[];
   categoria: string="";
   sede: string='1';
+  selected: boolean =false;
+  selectProducto!:Producto;
 
   constructor(private productoService: ProductoService, private sedeService:SedeService) { }
 
@@ -29,6 +33,8 @@ export class ProductoListComponent implements OnInit {
     let value = (<HTMLSelectElement>document.getElementById('categoria-select-producto')).value;
     this.categoria = value;
     console.log(this.categoria);
+    this.selected =false;
+
     this.getProductos(this.categoria,this.sede);
 
 
@@ -40,6 +46,7 @@ export class ProductoListComponent implements OnInit {
     let value = (<HTMLSelectElement> document.getElementById('sede-select-producto')).value;
     this.sede= value;
     console.log(this.sede) ;
+    this.selected =false;
     this.getProductos(this.categoria,this.sede);
 
 
@@ -65,6 +72,21 @@ getProductos(categoria: string,idSede:string): void
       this.sedes =sedes;
 
     });
+
+  }
+
+  onSelectedDet(producto: Producto):void
+  {
+    this.selected = true;
+    this.selectProducto = producto;
+
+  }
+
+
+  notselect():void
+  {
+    this.selected = false;
+
 
   }
 

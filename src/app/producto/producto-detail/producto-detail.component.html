@@ -1,3 +1,40 @@
-<p>
-  producto-detail works!
-</p>
+<div class="container-fluid_Detail">
+  <p class="h3 p-3">{{productoDetails.nombre}}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ productoDetails.imagen }}"
+          alt="{{ productoDetails.imagen }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+
+        <dt>Codigo del producto:</dt>
+        <dd>{{ productoDetails.id }}</dd>
+        <hr />
+        <dt> Nombre del producto</dt>
+        <dd>{{ productoDetails.nombre }}</dd>
+        <hr />
+        <dt class="bold">Descripcion: </dt>
+        <dd class="caption">{{ productoDetails.descripcion }}</dd>
+        <hr />
+        <dt class="bold">Costo: </dt>
+        <dd class = "caption">{{ productoDetails.costo }}</dd>
+        <hr />
+        <dt class="bold">disponibilidad: </dt>
+        <dd class = "caption">{{ productoDetails.disponibilidad}}</dd>
+        <hr />
+
+      <dt class="bold">categoria: </dt>
+      <dd class = "caption">{{ productoDetails.categoria}}</dd>
+      <hr />
+
+
+      </dl>
+    </div>
+  </div>
+ </div>
