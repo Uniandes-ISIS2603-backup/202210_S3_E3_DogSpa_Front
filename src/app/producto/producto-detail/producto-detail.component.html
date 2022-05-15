@@ -1,3 +1,5 @@
+
+
 <div class="container-fluid_Detail">
   <p class="h3 p-3">{{productoDetails.nombre}}</p>
   <div class="row">
@@ -23,7 +25,7 @@
         <dd class="caption">{{ productoDetails.descripcion }}</dd>
         <hr />
         <dt class="bold">Costo: </dt>
-        <dd class = "caption">{{ productoDetails.costo }}</dd>
+        <dd class = "caption">{{ productoDetails.costo |currency:"COP ":"symbol"}}</dd>
         <hr />
         <dt class="bold">disponibilidad: </dt>
         <dd class = "caption">{{ productoDetails.disponibilidad}}</dd>
