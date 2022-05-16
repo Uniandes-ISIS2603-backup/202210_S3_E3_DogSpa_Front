@@ -37,11 +37,11 @@
 
       </select>
     </div>
-
+    <ng-template #content let-modal>
     <div *ngIf="selected">
-      <app-producto-detail [productoDetails]="selectProducto"></app-producto-detail>
+      <app-producto-detail [productoDetails]="selectProducto" ></app-producto-detail>
 </div>
-
+</ng-template>
 
     </div>
 
@@ -55,10 +55,10 @@
 
     <div class="col mb-2" *ngFor="let producto of productos">
       <div class="card p-2" style="width: 25rem; height: 30rem;">
-        <img
+        <img type="button"
           class="card-img-top"
           src="{{producto.imagen}}"
-          alt = "{{producto.nombre}}" (mouseover)="onSelectedDet(producto)"
+          alt = "{{producto.nombre}}" role="button" (click)="onSelectedDet(producto,content)"
           />
 
           <div class = "card-body">
@@ -72,3 +72,5 @@
 </div>
   </div>
 </div>
+
+<ng-template></ng-template>

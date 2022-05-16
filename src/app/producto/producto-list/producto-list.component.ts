@@ -3,6 +3,7 @@ import { Producto } from '../producto';
 import { ProductoService } from '../producto.service';
 import { SedeService } from 'src/app/sede/sede.service';
 import { Sede } from 'src/app/sede/sede';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-producto-list',
@@ -19,7 +20,8 @@ export class ProductoListComponent implements OnInit {
   selected: boolean =false;
   selectProducto!:Producto;
 
-  constructor(private productoService: ProductoService, private sedeService:SedeService) { }
+
+  constructor(private productoService: ProductoService, private sedeService:SedeService, private modalServ:NgbModal) { }
 
   ngOnInit() {
     this.getProductos(this.categoria,this.sede);
@@ -75,10 +77,12 @@ getProductos(categoria: string,idSede:string): void
 
   }
 
-  onSelectedDet(producto: Producto):void
+  onSelectedDet(producto: Producto, content:any):void
   {
     this.selected = true;
     this.selectProducto = producto;
+    this.modalServ.open(content,{ windowClass: 'dark-modal' });
+
 
   }
 

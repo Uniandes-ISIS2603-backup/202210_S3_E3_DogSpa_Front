@@ -10,8 +10,18 @@ box-shadow: 10px;
 
 .fluid_Detail{
 
-
   position: absolute;
   z-index: 10;
+}
+img
+{
+  min-width: 300px;
+  min-height: 300px;
+  display: block;
+}
+.modal-content
+{
+  display: block;
+
 }
 
