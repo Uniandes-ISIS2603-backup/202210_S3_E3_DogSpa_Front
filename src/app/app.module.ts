@@ -10,6 +10,7 @@ import { SedeModule } from './sede/sede.module';
 import { HallOfFameModule } from './hall-of-fame/hall-of-fame.module';
 import { PackDeServiciosModule } from './pack-de-servicios/pack-de-servicios.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SedeModule,
     HallOfFameModule,
     PackDeServiciosModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
-<nav   class="navbar navbar-expand navbar-light" style="background-color: #f9dc5c">
+<nav class="navbar navbar-expand navbar-light" style="background-color: #f9dc5c">
   <div class="container-fluid">
-    <a class="navbar-brand bold tiny-left-margin" href="#">DogSpa</a>
+    <a class="navbar-brand bold tiny-left-margin" routerLink="">DogSpa</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,9 +19,9 @@
         <li class="nav-item active">
           <a class="nav-link" routerLink="productos" >Productos</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="sedes"  >Sedes</a>
-        </li>
+        <!-- <li class="nav-item active">
+          <a class="nav-link" routerLink="sedes">Sedes</a>
+        </li> -->
 
       </ul>
     </div>
@@ -34,8 +34,10 @@
 </div>
 <router-outlet></router-outlet>
 
+
+
 <section>
-  <footer class="text-center text-white fixed-bottom dark-green-bg">
+  <footer class="text-center text-white fixed-bottom col-xs-12">
     <div class="text-center p-2" style="background-color: #011936;">
       Desarrollo de Software en Equipos | <a href="https://uniandes.edu.co" target="_blank" title="Sitio oficial" style="color: #FFFFFF; text-decoration: none">Universidad de los Andes</a> ©
     </div>

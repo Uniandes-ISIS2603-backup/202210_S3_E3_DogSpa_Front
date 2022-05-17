@@ -12,6 +12,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule, RouterModule, ReactiveFormsModule
   ],
   declarations: [SedeListComponent, SedeDetailComponent],
-  exports: [SedeListComponent]
+  exports: [SedeListComponent, SedeDetailComponent]
 })
 export class SedeModule {}
