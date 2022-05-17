@@ -15,6 +15,7 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
     PackDeServiciosModule,
     BrowserAnimationsModule,
     HomeModule,
-    ButtonsModule
+    ButtonsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
