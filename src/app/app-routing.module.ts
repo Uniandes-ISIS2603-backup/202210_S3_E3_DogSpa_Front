@@ -8,7 +8,8 @@ import { SedeListComponent } from './sede/sede-list/sede-list.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule)},
+  //{path: '', component: HomeComponent},
   {path: 'servicios', component: ServicioListComponent},
   {path: 'packDeServicios', component: PackDeServiciosListComponent},
   {path: 'hallOfFame', component: HallOfFameListComponent},
