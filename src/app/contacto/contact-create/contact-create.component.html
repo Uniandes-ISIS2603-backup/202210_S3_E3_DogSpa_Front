@@ -1,0 +1,73 @@
+<div class="container mt-4">
+  <h2 class="text-center">Contáctanos</h2>
+  <form
+  [formGroup]="contactoForm" (ngSubmit)="!contactoForm.invalid"
+  >
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="nombre">Nombre</label>
+    <input
+      novalidate
+      id="nombre"
+      class="form-control"
+      formControlNombre="nom"
+      placeholder="Author's nombre"
+    />
+    <div
+      class="alert alert-danger alert-dismissible fade show"
+      *ngIf="
+      contactoForm.get('nombre')!.hasError('required') &&
+      contactoForm.get('nombre')!.touched
+      "
+    >
+    No tiene nombre
+  </div>
+    <div
+      class="alert alert-danger alert-dismissible fade show"
+      *ngIf="contactoForm.get('nombre')!.hasError('minlength')"
+    >
+
+    El nombre es muy corto
+    </div>
+  </div>
+
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="apellido">Apellido</label>
+    <input
+      novalidate
+      id="apellido"
+      class="form-control"
+      formControlNombre="apellido"
+      placeholder="apellido del contacto"
+    />
+    <div
+      class="alert alert-danger alert-dismissible fade show"
+      *ngIf="
+      contactoForm.get('apellido')!.hasError('required') &&
+      contactoForm.get('apellido')!.touched
+      "
+    >
+    No tiene apellido
+    </div>
+    <div
+      class="alert alert-danger alert-dismissible fade show"
+      *ngIf="contactoForm.get('apellido')!.hasError('minlength')"
+    >
+    el apellido está muy corto
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  </form>
+
+
+
+
+</div>

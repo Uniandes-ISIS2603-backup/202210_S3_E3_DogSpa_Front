@@ -4,12 +4,14 @@ import { HomeComponent } from './home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { SedeModule } from '../sede/sede.module';
 import { HomeRoutingModule } from './home-routing.module';
-
+import { ContactoModule } from '../contacto/contacto.module';
 @NgModule({
   imports: [
     CommonModule,
     SedeModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ContactoModule
+
   ],
   providers: [],
   declarations: [HomeComponent]
