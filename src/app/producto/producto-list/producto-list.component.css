@@ -89,3 +89,20 @@ footer {
   padding-left: 0;
 }
 
+
+.btn-light
+{
+  color: rgb(187,165,69);
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+span {
+  width: 50px;
+  height: 50px;
+  background: black;
+}

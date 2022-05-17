@@ -20,23 +20,12 @@
         </select>
       </div>
      <br>
-     <div class="form-group mx-sm-3 mb-2">
-      <label for="categoria"> Categorias: </label>
-      <select
-        class="form-control"
-        id="categoria-select-producto"
-        rows="3"
-        (change)="setCategoria()"
-      >
-        <option value="1">Seleccione una Categoria</option>
-        <option value="Ropa">Ropa</option>
-        <option value="Juguete">Juguete</option>
-        <option value="Cuidado">Cuidado</option>
-        <option value="Productos para Humano">Productos para Humano</option>
+     <br>
 
 
-      </select>
-    </div>
+
+
+
     <ng-template #content let-modal>
     <div *ngIf="selected">
       <app-producto-detail [productoDetails]="selectProducto" ></app-producto-detail>
@@ -44,8 +33,15 @@
 </ng-template>
 
     </div>
+<br>
+    <div class="button-row">
 
+      <button class="btn btn-light" (click)="setCategoria('Ropa')">Ropa </button>
+      <button  class="btn btn-light"  (click)="setCategoria('Juguete')">Juguetes </button>
+      <button class="btn btn-light"  (click)="setCategoria('Cuidado')">Cuidado </button>
+      <button class="btn btn-light"  (click)="setCategoria('Humano')">Productos para humano </button>
 
+    </div>
 
 
 

@@ -11,6 +11,8 @@ import { HallOfFameModule } from './hall-of-fame/hall-of-fame.module';
 import { PackDeServiciosModule } from './pack-de-servicios/pack-de-servicios.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './home/home.module';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { HomeModule } from './home/home.module';
     HallOfFameModule,
     PackDeServiciosModule,
     BrowserAnimationsModule,
-    HomeModule
+    HomeModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -30,9 +30,8 @@ export class ProductoListComponent implements OnInit {
 
   }
 
-  setCategoria(): void
+  setCategoria(value:string): void
   {
-    let value = (<HTMLSelectElement>document.getElementById('categoria-select-producto')).value;
     this.categoria = value;
     console.log(this.categoria);
     this.selected =false;
