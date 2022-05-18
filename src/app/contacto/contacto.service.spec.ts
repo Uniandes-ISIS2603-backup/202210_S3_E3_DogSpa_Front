@@ -2,11 +2,13 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { ContactoService } from './contacto.service';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 describe('Service: Contacto', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ContactoService]
+      providers: [ContactoService],
+      imports:[HttpClientTestingModule]
+
     });
   });
 

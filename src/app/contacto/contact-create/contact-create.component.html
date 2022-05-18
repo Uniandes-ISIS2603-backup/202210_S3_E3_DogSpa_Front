@@ -61,13 +61,78 @@
 
 
 
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="correo">Correo</label>
+    <input
+      novalidate
+      id="correo"
+      class="form-control"
+      formControlNombre="correo"
+      placeholder="correo del contacto"
+    />
+    <div
+      class="alert alert-danger alert-dismissible fade show"
+      *ngIf="
+      contactoForm.get('correo')!.hasError('required') &&
+      contactoForm.get('correo')!.touched
+      "
+    >
+    No tiene correo
+    </div>
+    <div
+      class="alert alert-danger alert-dismissible fade show"
+      *ngIf="contactoForm.get('correo')!.hasError('minlength')"
+    >
+    el correo está muy corto
+    </div>
+  </div>
 
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="mensaje">Mensaje</label>
+    <input
+      novalidate
+      id="mensaje"
+      class="form-control"
+      formControlNombre="mensaje"
+      placeholder="mensaje del contacto"
+    />
+    <div
+      class="alert alert-danger alert-dismissible fade show"
+      *ngIf="
+      contactoForm.get('mensaje')!.hasError('required') &&
+      contactoForm.get('mensaje')!.touched
+      "
+    >
+    No tiene mensaje
+    </div>
+    <div
+      class="alert alert-danger alert-dismissible fade show"
+      *ngIf="contactoForm.get('mensaje')!.hasError('maxLength')"
+    >
+    el mensaje está muy corto
+    </div>
+  </div>
 
-
+  <button type="submit" class="btn btn-primary" [disabled]="contactoForm.invalid">
+    Create
+  </button>
+  <button
+    type="submit"
+    id="submit"
+    class="btn btn-danger ml-3"
+    (click)="cancelCreation()"
+  >
+    Cancel
+  </button>
 
   </form>
 
 
 
+<br>
+<br>
+
+<br>
+<br>
 
 </div>

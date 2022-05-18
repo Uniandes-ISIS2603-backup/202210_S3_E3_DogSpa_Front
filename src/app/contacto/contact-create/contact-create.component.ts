@@ -10,6 +10,7 @@ import { Contacto } from '../contacto';
 })
 export class ContactCreateComponent implements OnInit {
   contactoForm!: FormGroup;
+
   constructor(
     private formBuilder: FormBuilder,
     private toastr: ToastrService,

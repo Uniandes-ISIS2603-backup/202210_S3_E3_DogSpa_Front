@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './home/home.module';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { ContactoModule } from './contacto/contacto.module';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -33,7 +34,8 @@ import { ContactoModule } from './contacto/contacto.module';
     BrowserAnimationsModule,
     HomeModule,
     ButtonsModule,
-    ContactoModule
+    ContactoModule,
+    ToastrModule.forRoot()
 
   ],
   providers: [],

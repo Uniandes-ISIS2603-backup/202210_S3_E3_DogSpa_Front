@@ -1,4 +1,5 @@
-export class Contacto {
+export class Contacto
+{
 
 nombre:string;
 apellido:string;
