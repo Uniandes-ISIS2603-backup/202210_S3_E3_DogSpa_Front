@@ -1,4 +1,3 @@
-import { SelfDecorator } from "@angular/core";
 export class Producto
 {
   id: number;

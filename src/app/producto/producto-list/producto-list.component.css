@@ -93,6 +93,9 @@ footer {
 .btn-light
 {
   color: rgb(187,165,69);
+  font-size: large;
+  text-shadow: #011936;
+
 }
 
 .button-row {
