@@ -19,9 +19,16 @@ export class ContactCreateComponent implements OnInit {
 
   ) { }
 
+  createBook(contacto: Contacto) {
+    if (!this.contactoForm.valid) return;
+    console.log (this.contactoForm.valid);
+  }
+
+
+
 
   cancelCreation() {
-    this.toastr.warning("El mensaje no se ha creado");
+    this.toastr.warning("El mensaje no se ha creado","No se ha creado el mensaje");
     this.contactoForm.reset();
   }
 
@@ -30,8 +37,8 @@ export class ContactCreateComponent implements OnInit {
 
     this.contactoForm = this.formBuilder.group({
       nombre:['',[Validators.required,Validators.minLength(2)]],
-      apellido: ['',Validators.required],
-      correo:['',Validators.required],
+      apellido: ['',[Validators.required,Validators.minLength(2)]],
+      correo:['',[Validators.required,Validators.minLength(2)]],
       mensaje:['',[Validators.required,Validators.maxLength(250)]],
     });
   }

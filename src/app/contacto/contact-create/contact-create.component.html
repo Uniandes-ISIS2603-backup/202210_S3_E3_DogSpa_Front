@@ -11,20 +11,20 @@
       id="nombre"
       class="form-control"
       formControlNombre="nom"
-      placeholder="Author's nombre"
+      placeholder="nombre del contacto"
     />
     <div
       class="alert alert-danger alert-dismissible fade show"
       *ngIf="
-      contactoForm.get('nombre')!.hasError('required') &&
-      contactoForm.get('nombre')!.touched
+      contactoForm.get('nombre')?.hasError('required') &&
+      contactoForm.get('nombre')?.touched
       "
     >
     No tiene nombre
   </div>
     <div
       class="alert alert-danger alert-dismissible fade show"
-      *ngIf="contactoForm.get('nombre')!.hasError('minlength')"
+      *ngIf="contactoForm.get('nombre')?.hasError('minlength')"
     >
 
     El nombre es muy corto
@@ -44,15 +44,15 @@
     <div
       class="alert alert-danger alert-dismissible fade show"
       *ngIf="
-      contactoForm.get('apellido')!.hasError('required') &&
-      contactoForm.get('apellido')!.touched
+      contactoForm.get('apellido')?.hasError('required') &&
+      contactoForm.get('apellido')?.touched
       "
     >
     No tiene apellido
     </div>
     <div
       class="alert alert-danger alert-dismissible fade show"
-      *ngIf="contactoForm.get('apellido')!.hasError('minlength')"
+      *ngIf="contactoForm.get('apellido')?.hasError('minlength')"
     >
     el apellido está muy corto
     </div>
@@ -73,15 +73,15 @@
     <div
       class="alert alert-danger alert-dismissible fade show"
       *ngIf="
-      contactoForm.get('correo')!.hasError('required') &&
-      contactoForm.get('correo')!.touched
+      contactoForm.get('correo')?.hasError('required') &&
+      contactoForm.get('correo')?.touched
       "
     >
     No tiene correo
     </div>
     <div
       class="alert alert-danger alert-dismissible fade show"
-      *ngIf="contactoForm.get('correo')!.hasError('minlength')"
+      *ngIf="contactoForm.get('correo')?.hasError('minlength')"
     >
     el correo está muy corto
     </div>
@@ -107,18 +107,21 @@
     </div>
     <div
       class="alert alert-danger alert-dismissible fade show"
-      *ngIf="contactoForm.get('mensaje')!.hasError('maxLength')"
+      *ngIf="contactoForm.get('mensaje')!.hasError('maxlength')"
     >
-    el mensaje está muy corto
+    el mensaje está muy largo
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary" [disabled]="contactoForm.invalid">
+  <button
+  id=" submit"
+  type="submit"
+  class="btn btn-primary"
+  [disabled]="!contactoForm.invalid">
     Create
   </button>
   <button
     type="submit"
-    id="submit"
     class="btn btn-danger ml-3"
     (click)="cancelCreation()"
   >
