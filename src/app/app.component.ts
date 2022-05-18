@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { System } from '@faker-js/faker/system';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -34,11 +34,6 @@ export class AppComponent implements OnInit{
       element.style.textDecoration = 'underline';
     }
 
-
-
   }
-
-
-
 
 }

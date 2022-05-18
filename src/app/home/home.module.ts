@@ -14,8 +14,6 @@ import { ToastrModule } from 'ngx-toastr';
     HomeRoutingModule,
     ContactoModule,
     ToastrModule.forRoot()
-
-
   ],
   providers: [],
   declarations: [HomeComponent]
