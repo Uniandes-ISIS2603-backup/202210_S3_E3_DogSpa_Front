@@ -109,3 +109,16 @@ span {
   height: 50px;
   background: black;
 }
+
+label
+{
+  font-size: large;
+  text-decoration:solid;
+}
+
+.form-control
+{
+  font-size: large;
+  background-color: #011936;
+  color: #f4fffd;
+}
