@@ -7,6 +7,8 @@ import { Producto } from '../producto';
   styleUrls: ['./producto-detail.component.css']
 })
 export class ProductoDetailComponent implements OnInit {
+
+
   @Input() productoDetails!: Producto;
 
   constructor() { }

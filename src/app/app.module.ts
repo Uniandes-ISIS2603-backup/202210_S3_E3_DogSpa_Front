@@ -12,6 +12,10 @@ import { PackDeServiciosModule } from './pack-de-servicios/pack-de-servicios.mod
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './home/home.module';
 import { ServicioRoutingModule } from './servicio/servicio-routing.module';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { ContactoModule } from './contacto/contacto.module';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 @NgModule({
@@ -28,9 +32,15 @@ import { ServicioRoutingModule } from './servicio/servicio-routing.module';
     HallOfFameModule,
     PackDeServiciosModule,
     BrowserAnimationsModule,
-    HomeModule
+    HomeModule,
+    ButtonsModule,
+    ContactoModule,
+    ToastrModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

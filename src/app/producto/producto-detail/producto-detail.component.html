@@ -1,3 +1,39 @@
-<p>
-  producto-detail works!
-</p>
+
+
+<div class="container-fluid_Detail">
+  <div class="modal-content">
+    <h2 class="modal-header">{{productoDetails.nombre}}</h2>
+
+        <img class = "img-thumbnail"
+          src="{{ productoDetails.imagen }}"
+          alt="{{ productoDetails.imagen }}">
+
+    <div class="modal-body">
+      <dl>
+
+        <dt> Codigo del producto:</dt>
+        <dd>{{ productoDetails.id }}</dd>
+        <hr />
+        <dt> Nombre del producto</dt>
+        <dd>{{ productoDetails.nombre }}</dd>
+        <hr />
+        <dt class="bold"> Descripcion: </dt>
+        <dd class="caption">{{ productoDetails.descripcion }}</dd>
+        <hr />
+        <dt class="bold"> Costo: </dt>
+        <dd class = "caption">{{ productoDetails.costo |currency:"COP ":"symbol"}}</dd>
+        <hr />
+        <dt class="bold"> Disponibilidad: </dt>
+        <dd class = "caption">{{ productoDetails.disponibilidad}}</dd>
+        <hr />
+
+      <dt class="bold"> Categoria: </dt>
+      <dd class = "caption">{{ productoDetails.categoria}}</dd>
+      <hr />
+
+
+      </dl>
+    </div>
+  </div>
+ </div>
+

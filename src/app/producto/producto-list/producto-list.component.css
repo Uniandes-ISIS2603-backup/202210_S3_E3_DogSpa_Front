@@ -1,9 +1,4 @@
-img {
-  height: 350px;
-  width: auto;
-  max-width: 500px;
 
-}
 
 .container-fluid
 {
@@ -22,16 +17,37 @@ h6
 
 .filtroSedes
 {
-  background-color: rgba(46, 53, 62, 0.363);
+  background-color: rgba(123, 152, 190, 0.363);
   color: #f4fffd;
+}
+
+.form-control:hover
+{
+  box-shadow: #011936;
+}
+
+option:hover
+{
+  background-color: #F9DC5C;
 }
 .card-title
 {
   text-shadow: #011936;
 }
 
+.card
+{
+  border: 10px;
+}
 
 
+.card:hover
+{
+  background-color: rgb(241, 241, 236);
+  border: 10px;
+  text-shadow: #363636;
+  box-shadow: 3px;
+}
 
 label {
     font-size: 1rem;
@@ -69,4 +85,40 @@ footer {
 }
 
 
+.btn-light
+{
+  color: rgb(187,165,69);
+  font-size: large;
+  text-shadow: #011936;
 
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+span {
+  width: 50px;
+  height: 50px;
+  background: black;
+}
+
+label
+{
+  font-size: large;
+  text-decoration:solid;
+}
+
+.form-control
+{
+  font-size: large;
+  background-color: #011936;
+  color: #f4fffd;
+}
+
+.modal-content
+{
+  margin-left: 100px;
+}

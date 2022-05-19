@@ -32,7 +32,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n        \"direccion\": \"calle 23 #98 //\",\n        \"nombre\": \"DogSpa: Santa Barbara\",\n        \"ciudad\": \"Bogota\",\n        \"imagen\": \"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/3f/94/4f/vista-de-uma-das-muitas.jpg?w=1200&h=-1&s=1\"\n    }"
+					"raw": "    {\n        \"direccion\": \"L-V de 8:00a.m. a 10:00p.m.\",\n        \"nombre\": \"DogSpa: Santa Barbara\",\n        \"ciudad\": \"Bogota\",\n        \"imagen\": \"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/3f/94/4f/vista-de-uma-das-muitas.jpg?w=1200&h=-1&s=1\"\n    }"
 				},
 				"url": {
 					"raw": "http://{{ip}}:{{puerto}}/api/sede",
@@ -77,7 +77,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n        \"direccion\": \"calle 180 #98 //\",\n        \"nombre\": \"DogSpa: Santa fe\",\n        \"ciudad\": \"Bogota\",\n        \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/f/f1/Santafe_Mall_in_north_Bogota.jpg\"\n    }"
+					"raw": "    {\n        \"direccion\": \"L-J de 8:00a.m. a 10:00p.m.\",\n        \"nombre\": \"DogSpa: Santa fe\",\n        \"ciudad\": \"Bogota\",\n        \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/f/f1/Santafe_Mall_in_north_Bogota.jpg\"\n    }"
 				},
 				"url": {
 					"raw": "http://{{ip}}:{{puerto}}/api/sede",
@@ -122,7 +122,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n        \"direccion\": \"calle 85 #933 //\",\n        \"nombre\": \"DogSpa: Unicentro\",\n        \"ciudad\": \"Bogota\",\n        \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/9/9e/Bogotá_Unicentro.JPG\"\n    }"
+					"raw": "    {\n        \"direccion\": \"L-M de 8:00a.m. a 10:00p.m.\",\n        \"nombre\": \"DogSpa: Unicentro\",\n        \"ciudad\": \"Bogota\",\n        \"imagen\": \"https://upload.wikimedia.org/wikipedia/commons/9/9e/Bogotá_Unicentro.JPG\"\n    }"
 				},
 				"url": {
 					"raw": "http://{{ip}}:{{puerto}}/api/sede",
