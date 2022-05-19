@@ -19,7 +19,10 @@ export class ServicioListComponent implements OnInit {
   sedes: Array<Sede>=[];
   sede: string ='1';
 
-  constructor(private servicioService: ServicioService, private sedeService:SedeService, private serviceSede:ServicioService, private router: Router,) {}
+  constructor(private servicioService: ServicioService,
+              private sedeService:SedeService,
+              private serviceSede:ServicioService,
+              private router: Router) {}
 
   getServicios(): void{
     this.servicioService.getServicios().subscribe({next: servicios =>

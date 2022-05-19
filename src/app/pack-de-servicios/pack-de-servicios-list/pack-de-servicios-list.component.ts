@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PackDeServiciosService } from '../pack-de-servicios.service';
 import { PackDeServiciosDetail } from '../pack-de-servicios-detail';
-import { ServicioService } from 'src/app/servicio/servicio.service';
-import { Servicio } from 'src/app/servicio/servicio';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pack-de-servicios-list',
@@ -15,17 +14,22 @@ export class PackDeServiciosListComponent implements OnInit {
   selectedPack!: PackDeServiciosDetail;
   isSelected: Boolean = false;
 
-  constructor(private packServicios: PackDeServiciosService) { }
+  constructor(private packServicios: PackDeServiciosService,
+              private router: Router) { }
 
   getPacksDeServicios() {
     this.packServicios.getPacksDeServicios().subscribe({next: packs => this.packs = packs, error: e => console.error(e)});
     console.log(this.packs);
   }
 
-  onSelected(pack: PackDeServiciosDetail) {
+  onSelected(pack: PackDeServiciosDetail): void {
+    /*
     this.isSelected = true;
     this.selectedPack = pack;
     console.log(this.selectedPack);
+    */
+   console.log(pack.id);
+   this.router.navigateByUrl('/packDeServicios/'+ pack.id);
   }
 
   ngOnInit() {
