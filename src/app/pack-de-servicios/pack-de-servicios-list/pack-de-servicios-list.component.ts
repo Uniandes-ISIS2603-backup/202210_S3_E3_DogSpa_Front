@@ -23,11 +23,6 @@ export class PackDeServiciosListComponent implements OnInit {
   }
 
   onSelected(pack: PackDeServiciosDetail): void {
-    /*
-    this.isSelected = true;
-    this.selectedPack = pack;
-    console.log(this.selectedPack);
-    */
    console.log(pack.id);
    this.router.navigateByUrl('/packDeServicios/'+ pack.id);
   }
