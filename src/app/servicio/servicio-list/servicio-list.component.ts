@@ -4,6 +4,7 @@ import { ServicioService } from '../servicio.service';
 import { ServicioDetail } from '../servicio-detail';
 import { SedeService } from 'src/app/sede/sede.service';
 import { Sede } from 'src/app/sede/sede';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-servicio-list',
@@ -18,7 +19,7 @@ export class ServicioListComponent implements OnInit {
   sedes: Array<Sede>=[];
   sede: string ='1';
 
-  constructor(private servicioService: ServicioService, private sedeService:SedeService, private serviceSede:ServicioService) { }
+  constructor(private servicioService: ServicioService, private sedeService:SedeService, private serviceSede:ServicioService, private router: Router,) {}
 
   getServicios(): void{
     this.servicioService.getServicios().subscribe({next: servicios =>
@@ -27,10 +28,8 @@ export class ServicioListComponent implements OnInit {
   }
 
   onSelected(servicio: ServicioDetail): void {
-    this.selected = true;
-    this.selectedService = servicio;
+    this.router.navigateByUrl('/servicios/'+servicio.id);
   }
-
   getSedes():void
   {
     this.sedeService.getSedes().subscribe((sedes)=>

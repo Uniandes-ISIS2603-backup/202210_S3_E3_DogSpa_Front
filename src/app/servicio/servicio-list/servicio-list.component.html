@@ -12,9 +12,6 @@
 <br> -->
 
 
-<div *ngIf="selected">
-  <app-servicio-detail [servicioDetail]="selectedService"></app-servicio-detail>
-</div>
 
 <div class="container-lg">
   <div class="row">
@@ -24,8 +21,8 @@
               class="card-img-top"
               src="{{ servicio.imagen }}"
               alt="{{ servicio.nombre }}"
-              (click)="onSelected(servicio)"
               width="300" height="200"
+              (click)="onSelected(servicio)"
             />
             <div class="card-body">
               <h5 class="card-title">{{ servicio.nombre }}</h5>

@@ -11,6 +11,7 @@ import { HallOfFameModule } from './hall-of-fame/hall-of-fame.module';
 import { PackDeServiciosModule } from './pack-de-servicios/pack-de-servicios.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './home/home.module';
+import { ServicioRoutingModule } from './servicio/servicio-routing.module';
 
 
 @NgModule({
