@@ -11,10 +11,10 @@ import { HallOfFameModule } from './hall-of-fame/hall-of-fame.module';
 import { PackDeServiciosModule } from './pack-de-servicios/pack-de-servicios.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './home/home.module';
+import { ServicioRoutingModule } from './servicio/servicio-routing.module';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { ContactoModule } from './contacto/contacto.module';
 import { ToastrModule } from 'ngx-toastr';
-
 
 
 
