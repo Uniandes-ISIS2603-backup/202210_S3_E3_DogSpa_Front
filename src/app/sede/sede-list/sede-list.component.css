@@ -41,3 +41,10 @@
   color: white;
   transform: rotateY(180deg);
 }
+
+.yourBlankSpaceDivClass {
+  padding: 20px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
