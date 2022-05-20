@@ -1,0 +1,11 @@
+<div class="gallery-carousel" (click)="close()">
+  <div class="carousel-image" (click)="onEvent($event)">
+    <img [src]="hallsOfFame[animHallOfFame].imagen">
+    <div class="carousel-button">
+      <span tabindex="1" (keyup.enter)="previous()" (click)="previous()">&lt;</span>
+      <span></span>
+      <span tabindex="2" (keyup.enter)="next()" (click)="next()">&gt;</span>
+    </div>
+  </div>
+  <span tabindex="3" (click)="close()">close</span>
+</div>

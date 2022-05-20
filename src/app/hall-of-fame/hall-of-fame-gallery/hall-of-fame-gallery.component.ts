@@ -10,6 +10,7 @@ import { HallOfFameService } from '../hallOfFame.service';
 export class HallOfFameGalleryComponent implements OnInit {
 
   hallsOfFame: Array<HallOfFame> = [];
+  selectedHallOfFame!: number|undefined;
 
   constructor(private hallOfFameService : HallOfFameService ) { }
 
@@ -24,4 +25,11 @@ export class HallOfFameGalleryComponent implements OnInit {
     console.log(this.hallsOfFame);
   }
 
+  onSelected(index:number): void {
+    this.selectedHallOfFame = index;
+  }
+
+  closeCarousel(): void {
+    this.selectedHallOfFame = undefined;
+  }
 }

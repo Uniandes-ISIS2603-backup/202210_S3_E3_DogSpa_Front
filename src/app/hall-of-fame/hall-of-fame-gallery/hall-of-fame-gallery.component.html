@@ -1,9 +1,10 @@
 <div class="container">
   <div class="gallery">
-    <div *ngFor="let hallOfFame of hallsOfFame" class="image">
-      <img src="{{ hallOfFame.imagen }}"
-      />
+    <div *ngFor="let hallOfFame of hallsOfFame; let i = index" class="image">
+      <img src="{{ hallOfFame.imagen }}" (click)="onSelected(i)"/>
       <span>+</span>
     </div>
   </div>
 </div>
+
+<app-hall-of-fame-carousel *ngIf="selectedHallOfFame"  [hallsOfFame]="hallsOfFame" [selectedHallOfFame]="selectedHallOfFame" (closeCarousel)="closeCarousel()"></app-hall-of-fame-carousel>
