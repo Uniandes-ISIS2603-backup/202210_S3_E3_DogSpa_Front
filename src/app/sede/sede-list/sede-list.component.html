@@ -1,9 +1,6 @@
-<div *ngIf="selected">
+<!-- <div *ngIf="selected">
 <app-sede-detail [sedeDetail]="selectedSede"></app-sede-detail>
-</div>
-
-
-
+</div> -->
 <div class="row">
   <!-- <div class="col mb-2" *ngFor="let sede of sedes">
         <div class="card p-2" style ="width: 20rem;">
@@ -23,7 +20,7 @@
   <div class="flip-card" *ngFor="let sede of sedes">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <img src="{{sede.imagen}}" alt="{{sede.nombre}}" style="width: 20rem;">
+        <img src="{{sede.imagen}}" alt="{{sede.nombre}}" style="width: 20rem; height: 12rem;">
       </div>
       <div class="flip-card-back">
         <br>
@@ -31,6 +28,7 @@
         <p>{{sede.ciudad}}</p>
         <p>{{sede.direccion}}</p>
       </div>
+      <div class="yourBlankSpaceDivClass"><br></div>
     </div>
   </div>
 </div>

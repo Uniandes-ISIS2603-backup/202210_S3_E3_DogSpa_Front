@@ -6,7 +6,4 @@ export class ServicioDetail extends Servicio {
   {
     super(id, nombre, descripcion, costo, restriccion, disponibilidad, imagen)
   }
-
-  // TODO poner todas las asociaciones
-
 }

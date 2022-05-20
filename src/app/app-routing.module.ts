@@ -10,11 +10,11 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule)},
   //{path: '', component: HomeComponent},
-  {path: 'servicios', component: ServicioListComponent},
-  {path: 'packDeServicios', component: PackDeServiciosListComponent},
-  {path: 'hallOfFame', component: HallOfFameListComponent},
-  {path: 'productos', component: ProductoListComponent},
-  {path: 'sedes', component: SedeListComponent}
+  //{path: 'servicio', component: ServicioListComponent},
+  //{path: 'packDeServicios', component: PackDeServiciosListComponent},
+  //{path: 'hallOfFame', component: HallOfFameListComponent},
+  //{path: 'productos', component: ProductoListComponent},
+  //{path: 'sedes', component: SedeListComponent}
 ]
 
 @NgModule({

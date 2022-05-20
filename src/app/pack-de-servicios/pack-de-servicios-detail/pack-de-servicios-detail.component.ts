@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PackDeServiciosDetail } from '../pack-de-servicios-detail';
 import { ActivatedRoute } from '@angular/router';
+import { PackDeServiciosDetail } from '../pack-de-servicios-detail';
 import { PackDeServiciosService } from '../pack-de-servicios.service';
 
 @Component({
@@ -13,7 +13,9 @@ export class PackDeServiciosDetailComponent implements OnInit {
   packId!: string;
   @Input() packDetail!: PackDeServiciosDetail;
 
-  constructor(private packsService: PackDeServiciosService) { }
+  constructor(
+              private packsService: PackDeServiciosService,
+              private route: ActivatedRoute) { }
 
   getPackDeServicio(): void {
     this.packsService.getPacksDeServicio(this.packId).subscribe(pack => {
@@ -22,7 +24,12 @@ export class PackDeServiciosDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getPackDeServicio();
+    if (this.packDetail === undefined) {
+      this.packId = this.route.snapshot.paramMap.get('id')!;
+    }
+    if (this.packId) {
+      this.getPackDeServicio();
+    }
   }
 
 }

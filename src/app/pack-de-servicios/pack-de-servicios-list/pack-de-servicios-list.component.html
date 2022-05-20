@@ -1,14 +1,18 @@
+<!--
 <div *ngIf="isSelected == true">
   <app-pack-de-servicios-detail [packDetail]="selectedPack"></app-pack-de-servicios-detail>
 </div>
 
 <hr />
-
+-->
 <div class="container-lg">
   <div class="row">
-    <div class="col mb-2" *ngFor="let each_pack of packs">
+    <div class="col col-mb-2 col-sm-3" *ngFor="let each_pack of packs">
       <div class="card p-2" id="each-card">
-        <img class="card-img-top" src="{{each_pack.imagen}}" alt="{{each_pack.nombre}}" (click)="onSelected(each_pack)">
+        <img class="card-img-top"
+             src="{{each_pack.imagen}}"
+             alt="{{each_pack.nombre}}"
+             (click)="onSelected(each_pack)">
         <div class="card-body">
           <h5 class="card-title">{{each_pack.nombre}}</h5>
           <p class="card-text">{{each_pack.descripcion}}</p>

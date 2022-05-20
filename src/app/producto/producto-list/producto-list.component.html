@@ -1,8 +1,6 @@
 
 
 
-
-
 <div class = "container-fluid">
   <h2 style="align-content: center;">Catalogo Productos :</h2>
 
@@ -22,27 +20,28 @@
         </select>
       </div>
      <br>
-     <div class="form-group mx-sm-3 mb-2">
-      <label for="categoria"> Categorias: </label>
-      <select
-        class="form-control"
-        id="categoria-select-producto"
-        rows="3"
-        (change)="setCategoria()"
-      >
-        <option value="1">Seleccione una sede</option>
-        <option value="Ropa">Ropa</option>
-        <option value="Juguete">Juguete</option>
-        <option value="Cuidado">Cuidado</option>
+     <br>
 
 
-      </select>
-    </div>
+
+
+
+    <ng-template #content let-modal>
+    <div *ngIf="selected">
+      <app-producto-detail [productoDetails]="selectProducto" ></app-producto-detail>
+</div>
+</ng-template>
 
     </div>
+<br>
+    <div class="button-row">
 
+      <button class="btn btn-light" (click)="setCategoria('Ropa')">Ropa </button>
+      <button  class="btn btn-light"  (click)="setCategoria('Juguete')">Juguetes </button>
+      <button class="btn btn-light"  (click)="setCategoria('Cuidado')">Cuidado </button>
+      <button class="btn btn-light"  (click)="setCategoria('Humano')">Productos para humano </button>
 
-
+    </div>
 
 
 
@@ -51,11 +50,12 @@
     <div class=" row">
 
     <div class="col mb-2" *ngFor="let producto of productos">
-      <div class="card p-2" style="width: 25rem; height: 30rem;">
-        <img
+      <div class="card p-2" id="each-card" style="width: 25rem; height: 30rem;">
+        <img type="button"
           class="card-img-top"
           src="{{producto.imagen}}"
-          alt = "{{producto.nombre}}" />
+          alt = "{{producto.nombre}}" role="button" (click)="onSelectedDet(producto,content)"
+          />
 
           <div class = "card-body">
             <h5 class="card-title"> {{producto.nombre}}</h5>
@@ -68,3 +68,5 @@
 </div>
   </div>
 </div>
+
+<ng-template></ng-template>

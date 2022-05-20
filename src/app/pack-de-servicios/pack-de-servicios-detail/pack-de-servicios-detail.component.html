@@ -11,7 +11,7 @@
     <div class="col">
       <dl>
         <dt>Servicios Ofrecidos</dt>
-        <dd class="caption" *ngFor="let each_servicio of packDetail.servicios">{{each_servicio.nombre}}</dd>
+        <dd class="caption" *ngFor="let each_servicio of packDetail.servicios"><a routerLink="/servicios/{{each_servicio.id}}">{{each_servicio.nombre}}</a></dd>
         <dt>Descripción</dt>
         <dd>{{packDetail.descripcion}} <br> Con un descuento del {{packDetail.descuento}} %.</dd>
         <dt>Costo</dt>
