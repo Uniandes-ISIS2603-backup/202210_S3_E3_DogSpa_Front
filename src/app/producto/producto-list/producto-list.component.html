@@ -48,7 +48,11 @@
     <br>
     <div class="container-fluid">
     <div class=" row">
+    <div class="row" *ngIf="productos.length < 1 ">
+      <h2 style="text-align: center;">No hay productos de {{categoria}} para esta sede</h2>
 
+
+    </div>
     <div class="col mb-2" *ngFor="let producto of productos">
       <div class="card p-2" id="each-card" style="width: 25rem; height: 30rem;">
         <img type="button"
