@@ -12,16 +12,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/servicios/list">Servicios</a>
+          <a class="nav-link" routerLink="/servicios/list" id="Servicios" (click)="setBoldElem('Servicios')">Servicios</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/packDeServicios/list">Packs de servicios</a>
+          <a class="nav-link" routerLink="/packDeServicios/list" id="pack" (click)="setBoldElem('pack')">Packs de servicios</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/hallOfFame/list">Hall of fame</a>
+          <a class="nav-link" routerLink="/hallOfFame/list" id="hall" (click)="setBoldElem('hall')">Hall of fame</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/productos/list">Productos</a>
+          <a class="nav-link" routerLink="/productos/list" id="Productos" (click)="setBoldElem('Productos')">Productos</a>
         </li>
         <!-- <li class="nav-item active">
           <a class="nav-link" routerLink="sedes">Sedes</a>
