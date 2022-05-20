@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HallOfFameListComponent } from './hall-of-fame-list/hall-of-fame-list.component';
+import { HallOfFameGalleryComponent } from './hall-of-fame-gallery/hall-of-fame-gallery.component';
 
 
 const routes: Routes = [{
@@ -9,6 +10,10 @@ const routes: Routes = [{
     {
       path: 'list',
       component: HallOfFameListComponent
+    },
+    {
+      path: 'gallery',
+      component: HallOfFameGalleryComponent
     },
   ]
 }];
