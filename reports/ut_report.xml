@@ -1,50 +1,50 @@
 <testExecutions version="1">
-  <file path="src/app/hall-of-fame/hallOfFame.service.spec.ts">
-    <testCase name="Service: Book should ..." duration="6"/>
-  </file>
-  <file path="src/app/producto/producto.service.spec.ts">
-    <testCase name="Service: Producto should ..." duration="1"/>
-  </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should render title" duration="20"/>
-    <testCase name="AppComponent should create the app" duration="4"/>
-    <testCase name="AppComponent should have as title 'dogspa-front'" duration="3"/>
-  </file>
-  <file path="src/app/sede/sede-list/sede-list.component.spec.ts">
-    <testCase name="SedeListComponent should create" duration="10"/>
-  </file>
-  <file path="src/app/producto/producto-list/producto-list.component.spec.ts">
-    <testCase name="ProductoListComponent should have an img element " duration="12"/>
-    <testCase name="ProductoListComponent should create" duration="4"/>
-  </file>
-  <file path="src/app/hall-of-fame/hall-of-fame-list/hall-of-fame-list.component.spec.ts">
-    <testCase name="HallOfFameListComponent should create" duration="4"/>
-  </file>
-  <file path="src/app/producto/producto-detail/producto-detail.component.spec.ts">
-    <testCase name="ProductoDetailComponent should create" duration="6"/>
-  </file>
-  <file path="src/app/servicio/servicio.service.spec.ts">
-    <testCase name="Service: Servicio should ..." duration="1"/>
-  </file>
-  <file path="src/app/contacto/contacto.service.spec.ts">
-    <testCase name="Service: Contacto should ..." duration="2"/>
-  </file>
-  <file path="src/app/pack-de-servicios/pack-de-servicios-detail/pack-de-servicios-detail.component.spec.ts">
-    <testCase name="PackDeServiciosDetailComponent should have an img element" duration="5"/>
-    <testCase name="PackDeServiciosDetailComponent should create" duration="3"/>
-  </file>
-  <file path="src/app/servicio/servicio-detail/servicio-detail.component.spec.ts">
-    <testCase name="ServicioDetailComponent should have an img element" duration="4"/>
-    <testCase name="ServicioDetailComponent should create" duration="3"/>
-  </file>
-  <file path="src/app/sede/sede.service.spec.ts">
-    <testCase name="Service: Sede should ..." duration="1"/>
+  <file path="src/app/pack-de-servicios/pack-de-servicios-list/pack-de-servicios-list.component.spec.ts">
+    <testCase name="PackDeServiciosListComponent should have an img element " duration="30"/>
+    <testCase name="PackDeServiciosListComponent should create" duration="6"/>
   </file>
   <file path="src/app/pack-de-servicios/pack-de-servicios.service.spec.ts">
     <testCase name="Service: PackDeServicios should ..." duration="1"/>
   </file>
-  <file path="src/app/pack-de-servicios/pack-de-servicios-list/pack-de-servicios-list.component.spec.ts">
-    <testCase name="PackDeServiciosListComponent should create" duration="5"/>
-    <testCase name="PackDeServiciosListComponent should have an img element " duration="4"/>
+  <file path="src/app/producto/producto-detail/producto-detail.component.spec.ts">
+    <testCase name="ProductoDetailComponent should create" duration="9"/>
+  </file>
+  <file path="src/app/servicio/servicio.service.spec.ts">
+    <testCase name="Service: Servicio should ..." duration="2"/>
+  </file>
+  <file path="src/app/producto/producto-list/producto-list.component.spec.ts">
+    <testCase name="ProductoListComponent should have an img element " duration="14"/>
+    <testCase name="ProductoListComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/contacto/contacto.service.spec.ts">
+    <testCase name="Service: Contacto should ..." duration="1"/>
+  </file>
+  <file path="src/app/servicio/servicio-detail/servicio-detail.component.spec.ts">
+    <testCase name="ServicioDetailComponent should have an img element" duration="5"/>
+    <testCase name="ServicioDetailComponent should create" duration="4"/>
+  </file>
+  <file path="src/app/hall-of-fame/hall-of-fame-list/hall-of-fame-list.component.spec.ts">
+    <testCase name="HallOfFameListComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/sede/sede.service.spec.ts">
+    <testCase name="Service: Sede should ..." duration="1"/>
+  </file>
+  <file path="src/app/hall-of-fame/hallOfFame.service.spec.ts">
+    <testCase name="Service: Book should ..." duration="1"/>
+  </file>
+  <file path="src/app/pack-de-servicios/pack-de-servicios-detail/pack-de-servicios-detail.component.spec.ts">
+    <testCase name="PackDeServiciosDetailComponent should have an img element" duration="8"/>
+    <testCase name="PackDeServiciosDetailComponent should create" duration="4"/>
+  </file>
+  <file path="src/app/sede/sede-list/sede-list.component.spec.ts">
+    <testCase name="SedeListComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="6"/>
+    <testCase name="AppComponent should render title" duration="2"/>
+    <testCase name="AppComponent should have as title 'dogspa-front'" duration="2"/>
+  </file>
+  <file path="src/app/producto/producto.service.spec.ts">
+    <testCase name="Service: Producto should ..." duration="1"/>
   </file>
 </testExecutions>
