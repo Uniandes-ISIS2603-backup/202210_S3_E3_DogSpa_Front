@@ -33,6 +33,7 @@ export class ServicioListComponent implements OnInit {
   onSelected(servicio: ServicioDetail): void {
     this.router.navigateByUrl('/servicios/'+servicio.id);
   }
+
   getSedes():void
   {
     this.sedeService.getSedes().subscribe((sedes)=>
