@@ -2,7 +2,7 @@
   <div class="gallery">
     <div *ngFor="let hallOfFame of hallsOfFame; let i = index" class="image">
       <img src="{{ hallOfFame.imagen }}" (click)="onSelected(i)">
-      <span>+</span>
+      <span><h5>{{ hallOfFame.prestador }}, {{ hallOfFame.servicio }}</h5></span>
     </div>
   </div>
 </div>
