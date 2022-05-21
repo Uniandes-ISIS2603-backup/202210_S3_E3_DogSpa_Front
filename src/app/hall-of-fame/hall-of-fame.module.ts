@@ -9,7 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   declarations: [HallOfFameGalleryComponent, HallOfFameCarouselComponent],
   exports: [HallOfFameGalleryComponent, HallOfFameCarouselComponent]

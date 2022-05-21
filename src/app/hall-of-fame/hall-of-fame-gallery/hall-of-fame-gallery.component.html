@@ -1,7 +1,7 @@
 <div class="container">
   <div class="gallery">
     <div *ngFor="let hallOfFame of hallsOfFame; let i = index" class="image">
-      <img src="{{ hallOfFame.imagen }}" (click)="onSelected(i)"/>
+      <img src="{{ hallOfFame.imagen }}" (click)="onSelected(i)">
       <span>+</span>
     </div>
   </div>

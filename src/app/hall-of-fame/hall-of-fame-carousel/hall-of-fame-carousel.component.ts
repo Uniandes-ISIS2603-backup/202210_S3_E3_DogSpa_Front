@@ -1,10 +1,44 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { HallOfFame } from '../hallOfFame';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-hall-of-fame-carousel',
   templateUrl: './hall-of-fame-carousel.component.html',
-  styleUrls: ['./hall-of-fame-carousel.component.css']
+  styleUrls: ['./hall-of-fame-carousel.component.css'],
+  animations: [
+    trigger('slide in', [
+      state('left', style({
+        opacity: 0,
+        transform: 'translateX(-100%)'
+        })),
+      state('middle', style({
+        opacity: 0,
+        transform: 'translateX(0)'
+        })),
+      state('left', style({
+        opacity: 0,
+        transform: 'translateX(100%)'
+        })),
+      transition('left => middle', [
+        style({
+          opacity: 0,
+          transform: 'translateX(100%)'
+        }),
+        animate('25ms')
+      ]),
+      transition('right => middle', [
+        style({
+          opacity: 0,
+          transform: 'translateX(-100%)'
+        }),
+        animate('25ms')
+      ]),
+      transition('middle => *', [
+        animate('25ms')
+      ])
+    ])
+  ]
 })
 export class HallOfFameCarouselComponent implements OnInit {
 
