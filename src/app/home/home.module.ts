@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { SedeModule } from '../sede/sede.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { ContactoModule } from '../contacto/contacto.module';
+import { HallOfFameModule } from '../hall-of-fame/hall-of-fame.module';
 import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -13,6 +14,7 @@ import { ToastrModule } from 'ngx-toastr';
     SedeModule,
     HomeRoutingModule,
     ContactoModule,
+    HallOfFameModule,
     ToastrModule.forRoot()
   ],
   providers: [],

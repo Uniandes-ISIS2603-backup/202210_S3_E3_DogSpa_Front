@@ -1,0 +1,70 @@
+.gallery-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(100, 100, 100, 0.5);
+  backdrop-filter: blur(5px);
+}
+.gallery-carousel .carousel-image {
+  background-color: #fff;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 567px) {
+  .gallery-carousel .carousel-image {
+    padding: 0.5rem;
+ }
+}
+.gallery-carousel .carousel-image img {
+  max-width: 50vw;
+  max-height: 70vh;
+}
+.gallery-carousel .carousel-image .carousel-button {
+  padding: 1.5rem;
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.gallery-carousel .carousel-image .carousel-button span {
+  color: transparent;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  padding: 0.5rem;
+  flex-grow: 1;
+}
+.gallery-carousel .carousel-image .carousel-button span:nth-child(3) {
+  justify-content: flex-end;
+}
+.gallery-carousel .carousel-image .carousel-button span:not(:nth-child(2)) {
+  cursor: pointer;
+}
+.gallery-carousel .carousel-image .carousel-button span:not(:nth-child(2)):focus, .gallery-carousel .carousel-image .carousel-button span:not(:nth-child(2)):hover {
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.gallery-carousel .carousel-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+.gallery-carousel .carousel-close:focus, .gallery-carousel .carousel-close:hover {
+  border: none;
+  outline: none;
+  color: #fff;
+  transform: scale(1.2);
+}

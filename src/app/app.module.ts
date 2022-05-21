@@ -26,6 +26,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
    ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ServicioModule,
     PackDeServiciosModule,

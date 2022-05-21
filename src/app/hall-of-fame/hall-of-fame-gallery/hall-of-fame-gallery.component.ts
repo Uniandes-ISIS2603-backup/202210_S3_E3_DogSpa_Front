@@ -3,13 +3,14 @@ import { HallOfFame } from '../hallOfFame';
 import { HallOfFameService } from '../hallOfFame.service';
 
 @Component({
-  selector: 'app-hall-of-fame-list',
-  templateUrl: './hall-of-fame-list.component.html',
-  styleUrls: ['./hall-of-fame-list.component.css']
+  selector: 'app-hall-of-fame-gallery',
+  templateUrl: './hall-of-fame-gallery.component.html',
+  styleUrls: ['./hall-of-fame-gallery.component.css']
 })
-export class HallOfFameListComponent implements OnInit {
+export class HallOfFameGalleryComponent implements OnInit {
 
   hallsOfFame: Array<HallOfFame> = [];
+  selectedHallOfFame!: number|undefined;
 
   constructor(private hallOfFameService : HallOfFameService ) { }
 
@@ -24,4 +25,11 @@ export class HallOfFameListComponent implements OnInit {
     console.log(this.hallsOfFame);
   }
 
+  onSelected(index:number): void {
+    this.selectedHallOfFame = index;
+  }
+
+  closeCarousel(): void {
+    this.selectedHallOfFame = undefined;
+  }
 }

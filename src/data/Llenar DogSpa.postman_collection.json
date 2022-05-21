@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "1342ea7e-58a6-45a6-aabf-face2d85003c",
+		"_postman_id": "2368a744-c346-4db7-ba13-56356950e7c3",
 		"name": "Llenar DogSpa",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19855886"
 	},
 	"item": [
 		{
@@ -1595,7 +1596,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\r\n        \"prestador\": \"Suba\",\r\n        \"servicio\" : \"Peluquería\",\r\n        \"imagen\": \"https://cff2.earth.com/uploads/2019/02/26123103/Dogs-tend-to-adopt-the-same-personality-traits-as-their-owners-960x640.jpg\"\r\n    }",
+					"raw": "    {\r\n        \"prestador\": \"Eric\",\r\n        \"servicio\" : \"Peluquería\",\r\n        \"imagen\": \"https://cff2.earth.com/uploads/2019/02/26123103/Dogs-tend-to-adopt-the-same-personality-traits-as-their-owners-960x640.jpg\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1638,7 +1639,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\r\n        \"prestador\": \"Usaquén\",\r\n        \"servicio\" : \"Limpieza nasal\",\r\n        \"imagen\": \"https://www.petmd.com/sites/default/files/styles/article_image/public/going-for-a-walk-picture-id917875026.jpg?itok=egUc9l-k\"\r\n    }",
+					"raw": "    {\r\n        \"prestador\": \"Martín\",\r\n        \"servicio\" : \"Limpieza nasal\",\r\n        \"imagen\": \"https://www.petmd.com/sites/default/files/styles/article_image/public/going-for-a-walk-picture-id917875026.jpg?itok=egUc9l-k\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1681,7 +1682,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\r\n        \"prestador\": \"Santa Fé\",\r\n        \"servicio\" : \"Uñas\",\r\n        \"imagen\": \"https://www.akc.org/wp-content/uploads/2015/06/Young-girl-meeting-a-young-Siberian-Husky-puppy.20190813162754417.jpg\"\r\n    }",
+					"raw": "    {\r\n        \"prestador\": \"Ana\",\r\n        \"servicio\" : \"Uñas\",\r\n        \"imagen\": \"https://www.akc.org/wp-content/uploads/2015/06/Young-girl-meeting-a-young-Siberian-Husky-puppy.20190813162754417.jpg\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1724,7 +1725,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\r\n        \"prestador\": \"Santa Fé\",\r\n        \"servicio\" : \"Masaje\",\r\n        \"imagen\": \"https://www.akc.org/wp-content/uploads/2019/10/Nova-Scotia-Duck-Tolling-Retriever-puppy-laying-down-indoors.20190813030428209.jpg\"\r\n    }",
+					"raw": "    {\r\n        \"prestador\": \"Juan\",\r\n        \"servicio\" : \"Masaje\",\r\n        \"imagen\": \"https://www.akc.org/wp-content/uploads/2019/10/Nova-Scotia-Duck-Tolling-Retriever-puppy-laying-down-indoors.20190813030428209.jpg\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1767,7 +1768,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\r\n        \"prestador\": \"Chía\",\r\n        \"servicio\" : \"Baño burbujeante\",\r\n        \"imagen\": \"https://www.akc.org/wp-content/uploads/2016/02/Boston-Terrier-getting-a-bath-in-a-tub-outdoors.jpeg\"\r\n    }\r\n",
+					"raw": "    {\r\n        \"prestador\": \"Joy\",\r\n        \"servicio\" : \"Baño burbujeante\",\r\n        \"imagen\": \"https://www.akc.org/wp-content/uploads/2016/02/Boston-Terrier-getting-a-bath-in-a-tub-outdoors.jpeg\"\r\n    }\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1810,7 +1811,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\r\n        \"prestador\": \"Teusaquillo\",\r\n        \"servicio\" : \"Guardería\",\r\n        \"imagen\": \"https://www.akc.org/wp-content/uploads/2019/05/English-Setter-waiting-in-a-kennel-in-the-back-of-a-hatchback-car.20190812032408929.jpg\"\r\n    }\r\n",
+					"raw": "    {\r\n        \"prestador\": \"Irene\",\r\n        \"servicio\" : \"Guardería\",\r\n        \"imagen\": \"https://www.akc.org/wp-content/uploads/2019/05/English-Setter-waiting-in-a-kennel-in-the-back-of-a-hatchback-car.20190812032408929.jpg\"\r\n    }\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
