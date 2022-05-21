@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 import { ProductoDetailComponent } from './producto-detail/producto-detail.component';
 import { ProductoListComponent } from './producto-list/producto-list.component';
 import { ProductoModule } from './producto.module';
@@ -16,7 +17,7 @@ const routes: Routes = [{
       component: ProductoDetailComponent
     },
   ]
-}];
+}, { path: '**', component: PagenotfoundComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
