@@ -15,22 +15,24 @@ import { ServicioRoutingModule } from './servicio/servicio-routing.module';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { ContactoModule } from './contacto/contacto.module';
 import { ToastrModule } from 'ngx-toastr';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-  ],
+    PagenotfoundComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ServicioModule,
+    PackDeServiciosModule,
     HttpClientModule,
+    HallOfFameModule,
     ProductoModule,
     SedeModule,
-    HallOfFameModule,
-    PackDeServiciosModule,
     BrowserAnimationsModule,
     HomeModule,
     ButtonsModule,

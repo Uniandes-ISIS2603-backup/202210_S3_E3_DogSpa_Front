@@ -8,7 +8,7 @@ const routes: Routes = [{
   path: 'servicios',
   children: [
     {
-      path: 'list',
+      path: '',
       component: ServicioListComponent
     },
     {
