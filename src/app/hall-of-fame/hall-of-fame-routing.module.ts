@@ -7,7 +7,7 @@ const routes: Routes = [{
   path: 'hallOfFame',
   children: [
     {
-      path: 'list',
+      path: '',
       component: HallOfFameListComponent
     },
   ]
