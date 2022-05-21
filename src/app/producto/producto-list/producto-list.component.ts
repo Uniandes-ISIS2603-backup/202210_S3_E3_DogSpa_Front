@@ -56,6 +56,7 @@ export class ProductoListComponent implements OnInit {
 
 
 
+
 getProductos(categoria: string,idSede:string): void
   {
     this.productoService.getProductosenSede(idSede).subscribe((productos)=>

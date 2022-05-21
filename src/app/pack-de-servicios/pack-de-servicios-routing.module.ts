@@ -8,7 +8,7 @@ const routes: Routes = [{
   path: 'packDeServicios',
   children: [
     {
-      path: 'list',
+      path: '',
       component: PackDeServiciosListComponent
     },
     {
