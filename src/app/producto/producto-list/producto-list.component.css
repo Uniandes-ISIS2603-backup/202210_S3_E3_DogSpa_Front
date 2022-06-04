@@ -52,6 +52,8 @@ option:hover
 label {
     font-size: 1rem;
     padding-right: 10px;
+    font-size: large;
+    text-decoration:solid;
 }
 
 select {
@@ -104,13 +106,6 @@ span {
   height: 50px;
   background: black;
 }
-
-label
-{
-  font-size: large;
-  text-decoration:solid;
-}
-
 .form-control
 {
   font-size: large;
